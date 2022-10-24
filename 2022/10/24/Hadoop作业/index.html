@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"primer-1-wy.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Hadoop作业@TOC （1）如何安装java虚拟机？1.下载jdk 首先去oracle官网下载对应系统和自己选择的版本的jdk包jdk下载的方式可以直接在linux系统上去官网下载或者使用命令行  1wget https:&#x2F;&#x2F;download.oracle.com&#x2F;otn&#x2F;java&#x2F;jdk&#x2F;8u271-b09&#x2F;61ae65e088624f5aaa0b1d2d801acb16&#x2F;jdk-8u271">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hadoop!!!">
+<meta property="og:url" content="https://primer-1-wy.github.io/2022/10/24/Hadoop%E4%BD%9C%E4%B8%9A/index.html">
+<meta property="og:site_name" content="wy-1226的博客">
+<meta property="og:description" content="Hadoop作业@TOC （1）如何安装java虚拟机？1.下载jdk 首先去oracle官网下载对应系统和自己选择的版本的jdk包jdk下载的方式可以直接在linux系统上去官网下载或者使用命令行  1wget https:&#x2F;&#x2F;download.oracle.com&#x2F;otn&#x2F;java&#x2F;jdk&#x2F;8u271-b09&#x2F;61ae65e088624f5aaa0b1d2d801acb16&#x2F;jdk-8u271">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-23T17:33:00.000Z">
+<meta property="article:modified_time" content="2022-10-24T02:54:39.688Z">
+<meta property="article:author" content="wy-1226">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://primer-1-wy.github.io/2022/10/24/Hadoop%E4%BD%9C%E4%B8%9A/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>hadoop!!! | wy-1226的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">wy-1226的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-resources">
+
+    <a href="/resources/" rel="section"><i class="download fa-fw"></i>资源</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://primer-1-wy.github.io/2022/10/24/Hadoop%E4%BD%9C%E4%B8%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wy-1226">
+      <meta itemprop="description" content="选择有时候比努力更重要">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wy-1226的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          hadoop!!!
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-10-24 01:33:00 / 修改时间：10:54:39" itemprop="dateCreated datePublished" datetime="2022-10-24T01:33:00+08:00">2022-10-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/coding/" itemprop="url" rel="index"><span itemprop="name">coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Hadoop作业"><a href="#Hadoop作业" class="headerlink" title="Hadoop作业"></a>Hadoop作业</h1><p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
+<h2 id="（1）如何安装java虚拟机？"><a href="#（1）如何安装java虚拟机？" class="headerlink" title="（1）如何安装java虚拟机？"></a>（1）如何安装java虚拟机？</h2><h3 id="1-下载jdk"><a href="#1-下载jdk" class="headerlink" title="1.下载jdk"></a>1.下载jdk</h3><ol>
+<li>首先去oracle官网下载对应系统和自己选择的版本的jdk包<br><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">jdk</a>下载的方式可以直接在linux系统上去官网下载或者使用命令行</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.oracle.com/otn/java/jdk/8u271-b09/61ae65e088624f5aaa0b1d2d801acb16/jdk-8u271-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-创建jdk安装目录"><a href="#2-创建jdk安装目录" class="headerlink" title="2.创建jdk安装目录"></a>2.创建jdk安装目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> /usr/java</span><br><span class="line">创建一个 /usr/java 目录</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cp</span> /root/jdk-8u271-linux-x64.tar.gz /usr/java/</span><br><span class="line">将之前下载的 tar 包拷贝到新建的目录下</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-解压jdk"><a href="#3-解压jdk" class="headerlink" title="3.解压jdk"></a>3.解压jdk</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar xzf jdk-8u271-linux-x64.tar.gz -C /usr/java</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4.配置环境变量"></a>4.配置环境变量</h3><p>打开配置文件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>进入编辑模式后输入以下指令</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1<span class="number">.8</span><span class="number">.0</span>_271</span><br><span class="line">export CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-重新读取环境变量"><a href="#5-重新读取环境变量" class="headerlink" title="5.重新读取环境变量"></a>5.重新读取环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-检查jdk是否安装成功"><a href="#6-检查jdk是否安装成功" class="headerlink" title="6.检查jdk是否安装成功"></a>6.检查jdk是否安装成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line"></span><br><span class="line">java version <span class="string">&quot;1.8.0_271&quot;</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_271-b13)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.271-b13, mixed mode)</span><br></pre></td></tr></table></figure>
+
+<h2 id="（2）为什么要配置ssh免密登录？"><a href="#（2）为什么要配置ssh免密登录？" class="headerlink" title="（2）为什么要配置ssh免密登录？"></a>（2）为什么要配置ssh免密登录？</h2><p>   在集群中，Hadoop控制脚本依赖SSH来执行针对整个集群的操作。例如，某个脚本能够终止并重启集群中的所有守护进程。所以，需要安装SSH，但是，SSH远程登陆的时候，需要密码验证，集群中数千台计算机，数千台计算机都需要手工输入密码，这是不太现实的，所以，就需要配置SSH无密码登录。</p>
+<h2 id="（3）-x2F-etc-x2F-hostname和-x2F-etc-x2F-hosts的作用分别是什么？"><a href="#（3）-x2F-etc-x2F-hostname和-x2F-etc-x2F-hosts的作用分别是什么？" class="headerlink" title="（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？"></a>（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？</h2><h3 id="hostname"><a href="#hostname" class="headerlink" title="hostname"></a>hostname</h3><blockquote>
+<p>1.hostname是主机名，用于在系统中标识一台机器。<br>2.在登陆linux系统后，[root@izm5e9z5o9dc8yjs3vh5mhz ~]，其中@后面的是主机名字，通过主机名字，可以判断登陆的系统。</p>
+</blockquote>
+<h3 id="hosts"><a href="#hosts" class="headerlink" title="hosts"></a>hosts</h3><blockquote>
+<p>1.hosts文件是linux系统中负责ip地址与域名快速解析的文件<br>2.以ASCII格式保存在&#x2F;etc目录下<br>3.文件名为hosts(不同的linux版本，文件也可能不同，比如Debian的对应文件是&#x2F;etc&#x2F;hostname。)<br>4.hosts文件包含了ip地址和主机名之间的映射，包括主机名的别名(在没有域名服务器的情况下，系统上的所有网络程序都通过查询该文件来解析对应于某个主机名的ip地址，否则就需要使用DNS服务程序来解决。)<br>5.通常可以将常用的域名和ip地址映射加入到hosts文件中，实现快速方便的访问<br>6.优先级：dns缓存&gt;hosts&gt;dns服务</p>
+</blockquote>
+<h2 id="（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？"><a href="#（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？" class="headerlink" title="（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？"></a>（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？</h2><p>在hadoop集群中，需要配置的文件主要包括四个，分别是core-site.xml、hdfs-site.xml、mapred-site.xml和yarn-site.xml</p>
+<h3 id="1-core-site-xml"><a href="#1-core-site-xml" class="headerlink" title="1.core-site.xml"></a>1.core-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">       &lt;!--指定namenode的地址--&gt;</span><br><span class="line">   &lt;property&gt;</span><br><span class="line">               &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">               &lt;value&gt;hdfs://DEV2:8020&lt;/value&gt;</span><br><span class="line">   &lt;/property&gt;</span><br><span class="line">   &lt;!--用来指定使用hadoop时产生文件的存放目录--&gt;</span><br><span class="line">   &lt;property&gt;</span><br><span class="line">            &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp&lt;/value&gt; </span><br><span class="line">   &lt;/property&gt;</span><br><span class="line">       &lt;!--用来设置检查点备份日志的最长时间--&gt;</span><br><span class="line">       &lt;name&gt;fs.checkpoint.period&lt;/name&gt; </span><br><span class="line">       &lt;value&gt;3600&lt;/value&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-hdfs-site-xml"><a href="#2-hdfs-site-xml" class="headerlink" title="2.hdfs-site.xml"></a>2.hdfs-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;!--指定hdfs保存数据的副本数量--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">            &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;2&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--指定hdfs中namenode的存储位置--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">             &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt; </span><br><span class="line">             &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp/dfs/name&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--指定hdfs中datanode的存储位置--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">             &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</span><br><span class="line">             &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp/dfs/data&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-mapred-site-xml"><a href="#3-mapred-site-xml" class="headerlink" title="3.mapred-site.xml"></a>3.mapred-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;!--告诉hadoop以后MR(Map/Reduce)运行在YARN上--&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">              &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">              &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">       &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-yarn-site-xml"><a href="#4-yarn-site-xml" class="headerlink" title="4.yarn-site.xml"></a>4.yarn-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">        &lt;!--nomenodeManager获取数据的方式是shuffle--&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">       &lt;!--指定Yarn的老大(ResourceManager)的地址--&gt;     </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">            &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;master&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt; </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--Yarn打印工作日志--&gt;    </span><br><span class="line">    &lt;property&gt;    </span><br><span class="line">        &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt; </span><br><span class="line">        &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;    </span><br><span class="line">    &lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;configuration&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Hadoop作业-1"><a href="#Hadoop作业-1" class="headerlink" title="Hadoop作业"></a>Hadoop作业</h1><p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
+<h2 id="（1）如何安装java虚拟机？-1"><a href="#（1）如何安装java虚拟机？-1" class="headerlink" title="（1）如何安装java虚拟机？"></a>（1）如何安装java虚拟机？</h2><h3 id="1-下载jdk-1"><a href="#1-下载jdk-1" class="headerlink" title="1.下载jdk"></a>1.下载jdk</h3><ol>
+<li>首先去oracle官网下载对应系统和自己选择的版本的jdk包<br><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">jdk</a>下载的方式可以直接在linux系统上去官网下载或者使用命令行</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.oracle.com/otn/java/jdk/8u271-b09/61ae65e088624f5aaa0b1d2d801acb16/jdk-8u271-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-创建jdk安装目录-1"><a href="#2-创建jdk安装目录-1" class="headerlink" title="2.创建jdk安装目录"></a>2.创建jdk安装目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> /usr/java</span><br><span class="line">创建一个 /usr/java 目录</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cp</span> /root/jdk-8u271-linux-x64.tar.gz /usr/java/</span><br><span class="line">将之前下载的 tar 包拷贝到新建的目录下</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-解压jdk-1"><a href="#3-解压jdk-1" class="headerlink" title="3.解压jdk"></a>3.解压jdk</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar xzf jdk-8u271-linux-x64.tar.gz -C /usr/java</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-配置环境变量-1"><a href="#4-配置环境变量-1" class="headerlink" title="4.配置环境变量"></a>4.配置环境变量</h3><p>打开配置文件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>进入编辑模式后输入以下指令</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1<span class="number">.8</span><span class="number">.0</span>_271</span><br><span class="line">export CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-重新读取环境变量-1"><a href="#5-重新读取环境变量-1" class="headerlink" title="5.重新读取环境变量"></a>5.重新读取环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-检查jdk是否安装成功-1"><a href="#6-检查jdk是否安装成功-1" class="headerlink" title="6.检查jdk是否安装成功"></a>6.检查jdk是否安装成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line"></span><br><span class="line">java version <span class="string">&quot;1.8.0_271&quot;</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_271-b13)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.271-b13, mixed mode)</span><br></pre></td></tr></table></figure>
+
+<h2 id="（2）为什么要配置ssh免密登录？-1"><a href="#（2）为什么要配置ssh免密登录？-1" class="headerlink" title="（2）为什么要配置ssh免密登录？"></a>（2）为什么要配置ssh免密登录？</h2><p>   在集群中，Hadoop控制脚本依赖SSH来执行针对整个集群的操作。例如，某个脚本能够终止并重启集群中的所有守护进程。所以，需要安装SSH，但是，SSH远程登陆的时候，需要密码验证，集群中数千台计算机，数千台计算机都需要手工输入密码，这是不太现实的，所以，就需要配置SSH无密码登录。</p>
+<h2 id="（3）-x2F-etc-x2F-hostname和-x2F-etc-x2F-hosts的作用分别是什么？-1"><a href="#（3）-x2F-etc-x2F-hostname和-x2F-etc-x2F-hosts的作用分别是什么？-1" class="headerlink" title="（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？"></a>（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？</h2><h3 id="hostname-1"><a href="#hostname-1" class="headerlink" title="hostname"></a>hostname</h3><blockquote>
+<p>1.hostname是主机名，用于在系统中标识一台机器。<br>2.在登陆linux系统后，[root@izm5e9z5o9dc8yjs3vh5mhz ~]，其中@后面的是主机名字，通过主机名字，可以判断登陆的系统。</p>
+</blockquote>
+<h3 id="hosts-1"><a href="#hosts-1" class="headerlink" title="hosts"></a>hosts</h3><blockquote>
+<p>1.hosts文件是linux系统中负责ip地址与域名快速解析的文件<br>2.以ASCII格式保存在&#x2F;etc目录下<br>3.文件名为hosts(不同的linux版本，文件也可能不同，比如Debian的对应文件是&#x2F;etc&#x2F;hostname。)<br>4.hosts文件包含了ip地址和主机名之间的映射，包括主机名的别名(在没有域名服务器的情况下，系统上的所有网络程序都通过查询该文件来解析对应于某个主机名的ip地址，否则就需要使用DNS服务程序来解决。)<br>5.通常可以将常用的域名和ip地址映射加入到hosts文件中，实现快速方便的访问<br>6.优先级：dns缓存&gt;hosts&gt;dns服务</p>
+</blockquote>
+<h2 id="（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？-1"><a href="#（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？-1" class="headerlink" title="（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？"></a>（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？</h2><p>在hadoop集群中，需要配置的文件主要包括四个，分别是core-site.xml、hdfs-site.xml、mapred-site.xml和yarn-site.xml</p>
+<h3 id="1-core-site-xml-1"><a href="#1-core-site-xml-1" class="headerlink" title="1.core-site.xml"></a>1.core-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">       &lt;!--指定namenode的地址--&gt;</span><br><span class="line">   &lt;property&gt;</span><br><span class="line">               &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">               &lt;value&gt;hdfs://DEV2:8020&lt;/value&gt;</span><br><span class="line">   &lt;/property&gt;</span><br><span class="line">   &lt;!--用来指定使用hadoop时产生文件的存放目录--&gt;</span><br><span class="line">   &lt;property&gt;</span><br><span class="line">            &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp&lt;/value&gt; </span><br><span class="line">   &lt;/property&gt;</span><br><span class="line">       &lt;!--用来设置检查点备份日志的最长时间--&gt;</span><br><span class="line">       &lt;name&gt;fs.checkpoint.period&lt;/name&gt; </span><br><span class="line">       &lt;value&gt;3600&lt;/value&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-hdfs-site-xml-1"><a href="#2-hdfs-site-xml-1" class="headerlink" title="2.hdfs-site.xml"></a>2.hdfs-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;!--指定hdfs保存数据的副本数量--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">            &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;2&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--指定hdfs中namenode的存储位置--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">             &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt; </span><br><span class="line">             &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp/dfs/name&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--指定hdfs中datanode的存储位置--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">             &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</span><br><span class="line">             &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp/dfs/data&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-mapred-site-xml-1"><a href="#3-mapred-site-xml-1" class="headerlink" title="3.mapred-site.xml"></a>3.mapred-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;!--告诉hadoop以后MR(Map/Reduce)运行在YARN上--&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">              &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">              &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">       &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-yarn-site-xml-1"><a href="#4-yarn-site-xml-1" class="headerlink" title="4.yarn-site.xml"></a>4.yarn-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">        &lt;!--nomenodeManager获取数据的方式是shuffle--&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">       &lt;!--指定Yarn的老大(ResourceManager)的地址--&gt;     </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">            &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;master&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt; </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--Yarn打印工作日志--&gt;    </span><br><span class="line">    &lt;property&gt;    </span><br><span class="line">        &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt; </span><br><span class="line">        &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;    </span><br><span class="line">    &lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;configuration&gt;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/10/24/%E9%A6%96%E9%A1%B5/" rel="prev" title="首页">
+      <i class="fa fa-chevron-left"></i> 首页
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/10/24/Bomb%20Lab!!!/" rel="next" title="Bomb Lab!!!">
+      Bomb Lab!!! <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hadoop%E4%BD%9C%E4%B8%9A"><span class="nav-number">1.</span> <span class="nav-text">Hadoop作业</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85java%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">（1）如何安装java虚拟机？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BDjdk"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.下载jdk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BAjdk%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.创建jdk安装目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A7%A3%E5%8E%8Bjdk"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.解压jdk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%87%8D%E6%96%B0%E8%AF%BB%E5%8F%96%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.1.5.</span> <span class="nav-text">5.重新读取环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%A3%80%E6%9F%A5jdk%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="nav-number">1.1.6.</span> <span class="nav-text">6.检查jdk是否安装成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%85%8D%E7%BD%AEssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">（2）为什么要配置ssh免密登录？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%883%EF%BC%89-x2F-etc-x2F-hostname%E5%92%8C-x2F-etc-x2F-hosts%E7%9A%84%E4%BD%9C%E7%94%A8%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.3.</span> <span class="nav-text">（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hostname"><span class="nav-number">1.3.1.</span> <span class="nav-text">hostname</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hosts"><span class="nav-number">1.3.2.</span> <span class="nav-text">hosts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%884%EF%BC%89Hadoop%E7%9A%84%E5%9B%9B%E4%B8%AA%E4%B8%BB%E8%A6%81xml%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%98%AF%E5%93%AA%E5%9B%9B%E4%B8%AA%EF%BC%8C%E5%88%86%E5%88%AB%E7%94%A8%E4%BA%8E%E9%85%8D%E7%BD%AE%E4%BB%80%E4%B9%88%E5%8F%82%E6%95%B0%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-core-site-xml"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.core-site.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-hdfs-site-xml"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.hdfs-site.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-mapred-site-xml"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.mapred-site.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-yarn-site-xml"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.yarn-site.xml</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hadoop%E4%BD%9C%E4%B8%9A-1"><span class="nav-number">2.</span> <span class="nav-text">Hadoop作业</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85java%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%9F-1"><span class="nav-number">2.1.</span> <span class="nav-text">（1）如何安装java虚拟机？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BDjdk-1"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.下载jdk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BAjdk%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95-1"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.创建jdk安装目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A7%A3%E5%8E%8Bjdk-1"><span class="nav-number">2.1.3.</span> <span class="nav-text">3.解压jdk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-1"><span class="nav-number">2.1.4.</span> <span class="nav-text">4.配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%87%8D%E6%96%B0%E8%AF%BB%E5%8F%96%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-1"><span class="nav-number">2.1.5.</span> <span class="nav-text">5.重新读取环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%A3%80%E6%9F%A5jdk%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F-1"><span class="nav-number">2.1.6.</span> <span class="nav-text">6.检查jdk是否安装成功</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%85%8D%E7%BD%AEssh%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%EF%BC%9F-1"><span class="nav-number">2.2.</span> <span class="nav-text">（2）为什么要配置ssh免密登录？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%883%EF%BC%89-x2F-etc-x2F-hostname%E5%92%8C-x2F-etc-x2F-hosts%E7%9A%84%E4%BD%9C%E7%94%A8%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-1"><span class="nav-number">2.3.</span> <span class="nav-text">（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hostname-1"><span class="nav-number">2.3.1.</span> <span class="nav-text">hostname</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hosts-1"><span class="nav-number">2.3.2.</span> <span class="nav-text">hosts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%884%EF%BC%89Hadoop%E7%9A%84%E5%9B%9B%E4%B8%AA%E4%B8%BB%E8%A6%81xml%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%98%AF%E5%93%AA%E5%9B%9B%E4%B8%AA%EF%BC%8C%E5%88%86%E5%88%AB%E7%94%A8%E4%BA%8E%E9%85%8D%E7%BD%AE%E4%BB%80%E4%B9%88%E5%8F%82%E6%95%B0%EF%BC%9F-1"><span class="nav-number">2.4.</span> <span class="nav-text">（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-core-site-xml-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">1.core-site.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-hdfs-site-xml-1"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.hdfs-site.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-mapred-site-xml-1"><span class="nav-number">2.4.3.</span> <span class="nav-text">3.mapred-site.xml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-yarn-site-xml-1"><span class="nav-number">2.4.4.</span> <span class="nav-text">4.yarn-site.xml</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">wy-1226</p>
+  <div class="site-description" itemprop="description">选择有时候比努力更重要</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Primer-1-wy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Primer-1-wy" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/m0_54015435?spm=1011.2427.3001.5343" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;m0_54015435?spm&#x3D;1011.2427.3001.5343" rel="noopener" target="_blank"><i class="codiepie fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wy-1226</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
