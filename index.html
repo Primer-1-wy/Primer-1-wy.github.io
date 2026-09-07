@@ -1,769 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"primer-1-wy.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta name="description" content="选择有时候比努力更重要">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wy-1226的博客">
-<meta property="og:url" content="https://primer-1-wy.github.io/index.html">
-<meta property="og:site_name" content="wy-1226的博客">
-<meta property="og:description" content="选择有时候比努力更重要">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="wy-1226">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://primer-1-wy.github.io/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>wy-1226的博客</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">wy-1226的博客</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-resources">
-
-    <a href="/resources/" rel="section"><i class="download fa-fw"></i>资源</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2ea" />
+    <meta name="description" content="wy-1226 的个人主页——计算机科学、项目实践与学习笔记。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="wy-1226 — CS Student &amp; Developer" />
+    <meta property="og:description" content="保持好奇，持续构建。这里记录我的项目、技术探索与学习笔记。" />
+    <meta property="og:url" content="https://primer-1-wy.github.io/" />
+    <meta property="og:image" content="https://primer-1-wy.github.io/images/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="wy-1226 — CS Student &amp; Developer" />
+    <meta name="twitter:description" content="保持好奇，持续构建。这里记录我的项目、技术探索与学习笔记。" />
+    <meta name="twitter:image" content="https://primer-1-wy.github.io/images/og.png" />
+    <link rel="canonical" href="https://primer-1-wy.github.io/" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32-next.png" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <script src="/js/home.js" defer></script>
+    <title>wy-1226 — CS Student &amp; Developer</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a class="brand" href="/" aria-label="返回首页"><span class="brand-mark" aria-hidden="true">W</span><span>wy-1226</span></a>
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="#about">关于</a><a href="#skills">技能</a><a href="#projects">项目</a><a href="#writing">博客</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" aria-label="切换深色模式"><span class="theme-icon" aria-hidden="true">☾</span></button>
+          <a class="nav-cta" href="https://github.com/Primer-1-wy" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </header>
 
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://primer-1-wy.github.io/2022/10/24/Bomb%20Lab!!!/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wy-1226">
-      <meta itemprop="description" content="选择有时候比努力更重要">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wy-1226的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/24/Bomb%20Lab!!!/" class="post-title-link" itemprop="url">Bomb Lab!!!</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-10-24 01:33:00 / 修改时间：10:15:12" itemprop="dateCreated datePublished" datetime="2022-10-24T01:33:00+08:00">2022-10-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/coding/" itemprop="url" rel="index"><span itemprop="name">coding</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Bomb-Lab"><a href="#Bomb-Lab" class="headerlink" title="Bomb Lab!!!"></a>Bomb Lab!!!</h1><p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
-<h2 id="准备操作"><a href="#准备操作" class="headerlink" title="准备操作"></a>准备操作</h2><ul>
-<li><p>starter code <a target="_blank" rel="noopener" href="https://cnchen2000.oss-cn-shanghai.aliyuncs.com/csapp/bomb.tar">link</a> (直接按住ctrl点击打开此超链接)下载后，在压缩包目录下键入 <strong>tar</strong> <strong>vxf</strong> <strong>bomb.tar</strong> 命令来解压，请<strong>先按照lab0说明文档后面所附的实验环境配置安装好环境</strong>，通过mobaXterm连接WSL，把解压文件夹拖动到WSL中，用VS Code打开项目文件夹。</p>
-<p>提供的文件包括：</p>
-</li>
-</ul>
-<p>​ <strong>bomb.c</strong>：包括炸弹主要程序的源文件，还有来自邪恶博士的友好问候。</p>
-<p>​ <strong>bomb</strong>：二进制炸弹可执行文件。</p>
-<p>打开项目后我们通过如下命令实现反汇编：<br>方法一：整体可执行文件的反汇编</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">objdump -d bomb &gt; bomb.s</span><br><span class="line"><span class="comment">//把bomb反汇编至bomb.s</span></span><br></pre></td></tr></table></figure>
-
-<p>方法二：反汇编部分函数</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(gdb) disassemble main</span><br><span class="line"><span class="comment">//main可以替换为你想要反汇编的函数名</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="phase-1"><a href="#phase-1" class="headerlink" title="phase_1"></a>phase_1</h2><h3 id="汇编代码"><a href="#汇编代码" class="headerlink" title="汇编代码"></a>汇编代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0000000000400</span>ee0 &lt;phase_1&gt;:</span><br><span class="line">  <span class="number">400</span>ee0:    <span class="number">48</span> <span class="number">83</span> ec <span class="number">08</span>              sub    $<span class="number">0x8</span>,%rsp <span class="comment">//栈指针%rsp-0x8 开辟一个0x8大小的空间</span></span><br><span class="line">  <span class="number">400</span>ee4:    be <span class="number">00</span> <span class="number">24</span> <span class="number">40</span> <span class="number">00</span>           mov    $<span class="number">0x402400</span>,%esi<span class="comment">//把0x402400传递给%esi</span></span><br><span class="line">  <span class="number">400</span>ee9:    e8 <span class="number">4</span>a <span class="number">04</span> <span class="number">00</span> <span class="number">00</span>           callq  <span class="number">401338</span> &lt;strings_not_equal&gt;<span class="comment">//调用函数  前面几个参数是为了传参</span></span><br><span class="line">  <span class="number">400</span>eee:    <span class="number">85</span> c0                    test   %eax,%eax<span class="comment">//函数返回值做与运算</span></span><br><span class="line">  <span class="number">400</span>ef0:    <span class="number">74</span> <span class="number">05</span>                    je     <span class="number">400</span>ef7 &lt;phase_1+<span class="number">0x17</span>&gt;<span class="comment">//</span></span><br><span class="line">  <span class="number">400</span>ef2:    e8 <span class="number">43</span> <span class="number">05</span> <span class="number">00</span> <span class="number">00</span>           callq  <span class="number">40143</span>a &lt;explode_bomb&gt;<span class="comment">//调用函数 如果没有跳转bomb</span></span><br><span class="line">  <span class="number">400</span>ef7:    <span class="number">48</span> <span class="number">83</span> c4 <span class="number">08</span>              add    $<span class="number">0x8</span>,%rsp</span><br><span class="line">  <span class="number">400</span>efb:    c3                       retq   </span><br></pre></td></tr></table></figure>
-
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>phase_1执行过程如下：</p>
-<p>首先通过callq指令调用strings_not_equal函数。根据过程调用的规则，可以确定这个函数接受2个参数。第一个参数是%rdi, 上面分析过，是我们拆弹时输入的字符串；第二个参数是$esi，值为0x402400。顾名思义，strings_not_equal函数用来判断两个字符串是否相等。<br>接着用test指令判断函数的返回值是否为0。如果为0进行跳转并返回，调用phase_defused拆除炸弹，否则通过callq指令调用explode_bomb，引爆炸弹。<br>因此，拆弹的关键在于，确认0x402400地址处的字符串是什么。只需要在0x400ee9处打个gdb断点就可以了。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;(gdb) x /s <span class="number">0x402400</span></span><br><span class="line"><span class="number">0x402400</span>:       <span class="string">&quot;Border relations with Canada have never been better.&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>也就是我们输入的字符串要是”Border relations with Canada have never been better.”炸弹才不会爆炸。</p>
-<h3 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">phase_1</span><span class="params">(<span class="type">char</span>* output)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( <span class="built_in">string_not_equal</span>(output, <span class="string">&quot;Border relations with Canada have never been better.&quot;</span>) == <span class="number">0</span>) </span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="phase-2"><a href="#phase-2" class="headerlink" title="phase_2"></a>phase_2</h2><h3 id="汇编代码-1"><a href="#汇编代码-1" class="headerlink" title="汇编代码"></a>汇编代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0000000000400</span>efc &lt;phase_2&gt;:</span><br><span class="line">  <span class="number">400</span>efc:   <span class="number">55</span>                      push   %rbp</span><br><span class="line">  <span class="number">400</span>efd:   <span class="number">53</span>                      push   %rbx</span><br><span class="line">  <span class="number">400</span>efe:   <span class="number">48</span> <span class="number">83</span> ec <span class="number">28</span>             sub    $<span class="number">0x28</span>,%rsp</span><br><span class="line">  <span class="number">400f</span>02:   <span class="number">48</span> <span class="number">89</span> e6                mov    %rsp,%rsi             # %rsi作为read_six_numbers的第二个入参传递, $rsp既是入参也是出参；第一个入参为$rdi, 即用户输入的字符串</span><br><span class="line">  <span class="number">400f</span>05:   e8 <span class="number">52</span> <span class="number">05</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40145</span>c &lt;read_six_numbers&gt; # 读六个数字</span><br><span class="line">  <span class="number">400f</span>0a:   <span class="number">83</span> <span class="number">3</span>c <span class="number">24</span> <span class="number">01</span>             cmpl   $<span class="number">0x1</span>,(%rsp)             # %rsp为调用者保存寄存器，过程调用前后值不变，因此保存的是read_six_numbers输出的<span class="number">6</span>个数，(%rsp)保存的是第一个整数</span><br><span class="line">  <span class="number">400f</span>0e:   <span class="number">74</span> <span class="number">20</span>                   je     <span class="number">400f</span>30 &lt;phase_2+<span class="number">0x34</span>&gt;</span><br><span class="line">  <span class="number">400f</span>10:   e8 <span class="number">25</span> <span class="number">05</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">400f</span>15:   eb <span class="number">19</span>                   jmp    <span class="number">400f</span>30 &lt;phase_2+<span class="number">0x34</span>&gt;# 将<span class="number">6</span>个整数看作一个数组</span><br><span class="line">  <span class="number">400f</span>17:   <span class="number">8b</span> <span class="number">43</span> fc                mov    <span class="number">-0x4</span>(%rbx),%eax        # 将数组前一个数保存到%eax</span><br><span class="line">  <span class="number">400f</span>1a:   <span class="number">01</span> c0                   add    %eax,%eax            # 将%eax乘以<span class="number">2</span></span><br><span class="line">  <span class="number">400f</span>1c:   <span class="number">39</span> <span class="number">03</span>                   cmp    %eax,(%rbx)            # 判断当前整数是否为前一个数的两倍， 不等则爆炸，相等跳转到<span class="number">400f</span>25，</span><br><span class="line">  <span class="number">400f</span>1e:   <span class="number">74</span> <span class="number">05</span>                   je     <span class="number">400f</span>25 &lt;phase_2+<span class="number">0x29</span>&gt;</span><br><span class="line">  <span class="number">400f</span>20:   e8 <span class="number">15</span> <span class="number">05</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">400f</span>25:   <span class="number">48</span> <span class="number">83</span> c3 <span class="number">04</span>             add    $<span class="number">0x4</span>,%rbx            # 每次循环，将rbx值加<span class="number">4</span>，即指向数组的下一个元素</span><br><span class="line">  <span class="number">400f</span>29:   <span class="number">48</span> <span class="number">39</span> eb                cmp    %rbp,%rbx            <span class="meta"># rbp指向数组结尾，标识循环是否结束</span></span><br><span class="line">  <span class="number">400f</span>2c:   <span class="number">75</span> e9                   jne    <span class="number">400f</span>17 &lt;phase_2+<span class="number">0x1b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>2e:   eb <span class="number">0</span>c                   jmp    <span class="number">400f</span>3c &lt;phase_2+<span class="number">0x40</span>&gt;</span><br><span class="line">  <span class="number">400f</span>30:   <span class="number">48</span> <span class="number">8</span>d <span class="number">5</span>c <span class="number">24</span> <span class="number">04</span>          lea    <span class="number">0x4</span>(%rsp),%rbx         # 最初rbx指向第二个数，</span><br><span class="line">  <span class="number">400f</span>35:   <span class="number">48</span> <span class="number">8</span>d <span class="number">6</span>c <span class="number">24</span> <span class="number">18</span>          lea    <span class="number">0x18</span>(%rsp),%rbp      # %rbp = $rsp + <span class="number">24</span></span><br><span class="line">  <span class="number">400f</span>3a:   eb db                   jmp    <span class="number">400f</span>17 &lt;phase_2+<span class="number">0x1b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>3c:   <span class="number">48</span> <span class="number">83</span> c4 <span class="number">28</span>             add    $<span class="number">0x28</span>,%rsp</span><br><span class="line">  <span class="number">400f</span>40:   <span class="number">5b</span>                      pop    %rbx</span><br><span class="line">  <span class="number">400f</span>41:   <span class="number">5</span>d                      pop    %rbp</span><br><span class="line">  <span class="number">400f</span>42:   c3                      retq</span><br></pre></td></tr></table></figure>
-
-<p>逻辑化一下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">phase_2</span>(rdi)</span><br><span class="line">&#123;</span><br><span class="line">    rsi = rsp;</span><br><span class="line">    callq read_six_number;</span><br><span class="line">    <span class="keyword">if</span> (*rsp == <span class="number">1</span>)</span><br><span class="line">        <span class="keyword">goto</span> <span class="number">400f</span>30;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        callq explode_bomb;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>30;</span><br><span class="line"><span class="number">400f</span>17:</span><br><span class="line">    eax = *(rbx<span class="number">-4</span>);</span><br><span class="line">    eax += eax;</span><br><span class="line">    <span class="keyword">if</span> (eax == *rbx)</span><br><span class="line">        <span class="keyword">goto</span> <span class="number">400f</span>25;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        callq explode_bomb;</span><br><span class="line"><span class="number">400f</span>25:</span><br><span class="line">    rbx += <span class="number">4</span>;            # 下一个元素</span><br><span class="line">    <span class="keyword">if</span> (rbx != rbp)</span><br><span class="line">        <span class="keyword">goto</span> <span class="number">400f</span>17;    # 循环</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">goto</span> <span class="number">400f</span>3c;</span><br><span class="line"><span class="number">400f</span>30:</span><br><span class="line">    rbx = rsp + <span class="number">4</span>;        # 初始化 init</span><br><span class="line">    rbp = rsp + <span class="number">24</span>;        # 数组结束</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>17;</span><br><span class="line"><span class="number">400f</span>3c:</span><br><span class="line">    retq</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h3><p>phase_2程序先调用read_six_numbers。该函数接受两个参数，第一个参数为$rdi, 即我们输入的字符串；第二个参数为$rsp, $rsp既是入参也是出参，用于保存read_six_numbers函数解析$rdi后得到的6个整数。查看0x400f02, 0x401463 ~ 0x40147c处的代码，我们可以把调用者phase_2中的，$rsp看作一个一维数组的首地址，该数组的长度为6，内容依次为$rsp, $rsp + 4, $rsp + 8, $rsp + 12, $rsp + 16, $rsp + 20，用于 保存sscanf函数执行后生成的6个整数。由0x400f0a: cmpl $0x1,(%rsp)可知，第一个整数一定是1，然后跳转到0x400f30进入循环。将这6个数看作一个数组， 由0x400f30处代码，$rbx可看作这个数组的下标，初始值为1，指向第2个整数；由0x400f35处代码，$rbp标识着数组的结尾，用于判断循环是否退出。由0x400f17 ~ 0x400f1c代码可知，每次循环判断数组当前元素是否为前一个元素的两倍，不等则爆炸。因此答案为1 2 4 8 16 32， 唯一解。</p>
-<h3 id="伪代码-1"><a href="#伪代码-1" class="headerlink" title="伪代码"></a>伪代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">phase_2</span>(edi)</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">phase_2</span><span class="params">(<span class="type">char</span>* output)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> array[<span class="number">6</span>];</span><br><span class="line">    <span class="built_in">read_six_numbers</span>(output, array);</span><br><span class="line">    <span class="keyword">if</span> (array[<span class="number">0</span>] != <span class="number">1</span>)    </span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">        <span class="type">int</span> temp=array[i<span class="number">-1</span>];</span><br><span class="line">        temp+=temp;</span><br><span class="line">        <span class="keyword">if</span> (array[i] != temp)</span><br><span class="line">            <span class="built_in">explode_bomb</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="phase-3"><a href="#phase-3" class="headerlink" title="phase_3"></a>phase_3</h2><h3 id="汇编代码-2"><a href="#汇编代码-2" class="headerlink" title="汇编代码"></a>汇编代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0000000000400f</span>43 &lt;phase_3&gt;:</span><br><span class="line">  <span class="number">400f</span>43:   <span class="number">48</span> <span class="number">83</span> ec <span class="number">18</span>             sub    $<span class="number">0x18</span>,%rsp</span><br><span class="line">  <span class="number">400f</span>47:   <span class="number">48</span> <span class="number">8</span>d <span class="number">4</span>c <span class="number">24</span> <span class="number">0</span>c          lea    <span class="number">0xc</span>(%rsp),%rcx        # 第二个整数位于$rsp + <span class="number">12</span></span><br><span class="line">  <span class="number">400f</span>4c:   <span class="number">48</span> <span class="number">8</span>d <span class="number">54</span> <span class="number">24</span> <span class="number">08</span>          lea    <span class="number">0x8</span>(%rsp),%rdx        # 第一个整数位于%rsp + <span class="number">8</span></span><br><span class="line">  <span class="number">400f</span>51:   be cf <span class="number">25</span> <span class="number">40</span> <span class="number">00</span>          mov    $<span class="number">0x4025cf</span>,%esi        # 查看<span class="number">0x4025cf</span>地址处内存，为<span class="string">&quot;%d %d&quot;</span>，表示接受两个整数作为输入</span><br><span class="line">  <span class="number">400f</span>56:   b8 <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x0</span>,%eax</span><br><span class="line">  <span class="number">400f</span>5b:   e8 <span class="number">90</span> fc ff ff          callq  <span class="number">400b</span>f0 &lt;__isoc99_sscanf@plt&gt;</span><br><span class="line">  <span class="number">400f</span>60:   <span class="number">83</span> f8 <span class="number">01</span>                cmp    $<span class="number">0x1</span>,%eax            <span class="meta"># sscanf返回值需大于1，否则爆炸。说明可变参数个数为2</span></span><br><span class="line">  <span class="number">400f</span>63:   <span class="number">7f</span> <span class="number">05</span>                   jg     <span class="number">400f</span>6a &lt;phase_3+<span class="number">0x27</span>&gt;</span><br><span class="line">  <span class="number">400f</span>65:   e8 d0 <span class="number">04</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">400f</span>6a:   <span class="number">83</span> <span class="number">7</span>c <span class="number">24</span> <span class="number">08</span> <span class="number">07</span>          cmpl   $<span class="number">0x7</span>,<span class="number">0x8</span>(%rsp)        # 第一个数必须小于<span class="number">7</span>，否则爆炸</span><br><span class="line">  <span class="number">400f</span>6f:   <span class="number">77</span> <span class="number">3</span>c                   ja     <span class="number">400f</span>ad &lt;phase_3+<span class="number">0x6a</span>&gt;# 比较结果大于<span class="number">0</span>则跳转</span><br><span class="line">  <span class="number">400f</span>71:   <span class="number">8b</span> <span class="number">44</span> <span class="number">24</span> <span class="number">08</span>             mov    <span class="number">0x8</span>(%rsp),%eax</span><br><span class="line">  <span class="number">400f</span>75:   ff <span class="number">24</span> c5 <span class="number">70</span> <span class="number">24</span> <span class="number">40</span> <span class="number">00</span>    jmpq   *<span class="number">0x402470</span>(,%rax,<span class="number">8</span>)    # 跳转表结构，对应C语言中的<span class="keyword">switch</span>语句</span><br><span class="line">  <span class="number">400f</span>7c:   b8 cf <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0xcf</span>,%eax            # %rax = <span class="number">0</span>，跳转到<span class="number">400f</span>7c</span><br><span class="line">  <span class="number">400f</span>81:   eb <span class="number">3b</span>                   jmp    <span class="number">400f</span>be &lt;phase_3+<span class="number">0x7b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>83:   b8 c3 <span class="number">02</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x2c3</span>,%eax</span><br><span class="line">  <span class="number">400f</span>88:   eb <span class="number">34</span>                   jmp    <span class="number">400f</span>be &lt;phase_3+<span class="number">0x7b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>8a:   b8 <span class="number">00</span> <span class="number">01</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x100</span>,%eax</span><br><span class="line">  <span class="number">400f</span>8f:   eb <span class="number">2</span>d                   jmp    <span class="number">400f</span>be &lt;phase_3+<span class="number">0x7b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>91:   b8 <span class="number">85</span> <span class="number">01</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x185</span>,%eax</span><br><span class="line">  <span class="number">400f</span>96:   eb <span class="number">26</span>                   jmp    <span class="number">400f</span>be &lt;phase_3+<span class="number">0x7b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>98:   b8 ce <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0xce</span>,%eax</span><br><span class="line">  <span class="number">400f</span>9d:   eb <span class="number">1f</span>                   jmp    <span class="number">400f</span>be &lt;phase_3+<span class="number">0x7b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>9f:   b8 aa <span class="number">02</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x2aa</span>,%eax</span><br><span class="line">  <span class="number">400f</span>a4:   eb <span class="number">18</span>                   jmp    <span class="number">400f</span>be &lt;phase_3+<span class="number">0x7b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>a6:   b8 <span class="number">47</span> <span class="number">01</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x147</span>,%eax</span><br><span class="line">  <span class="number">400f</span>ab:   eb <span class="number">11</span>                   jmp    <span class="number">400f</span>be &lt;phase_3+<span class="number">0x7b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>ad:   e8 <span class="number">88</span> <span class="number">04</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">400f</span>b2:   b8 <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x0</span>,%eax</span><br><span class="line">  <span class="number">400f</span>b7:   eb <span class="number">05</span>                   jmp    <span class="number">400f</span>be &lt;phase_3+<span class="number">0x7b</span>&gt;</span><br><span class="line">  <span class="number">400f</span>b9:   b8 <span class="number">37</span> <span class="number">01</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x137</span>,%eax</span><br><span class="line">  <span class="number">400f</span>be:   <span class="number">3b</span> <span class="number">44</span> <span class="number">24</span> <span class="number">0</span>c             cmp    <span class="number">0xc</span>(%rsp),%eax        # 判断%eax值与第二个参数是否相等，不等则爆炸</span><br><span class="line">  <span class="number">400f</span>c2:   <span class="number">74</span> <span class="number">05</span>                   je     <span class="number">400f</span>c9 &lt;phase_3+<span class="number">0x86</span>&gt;</span><br><span class="line">  <span class="number">400f</span>c4:   e8 <span class="number">71</span> <span class="number">04</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">400f</span>c9:   <span class="number">48</span> <span class="number">83</span> c4 <span class="number">18</span>             add    $<span class="number">0x18</span>,%rsp</span><br><span class="line">  <span class="number">400f</span>cd:   c3                      retq</span><br></pre></td></tr></table></figure>
-
-<p>逻辑下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">phase_3</span>(rdi)</span><br><span class="line">&#123;</span><br><span class="line">    # 省略分配栈上空间</span><br><span class="line">    rcx = rsp + <span class="number">0xc</span>;</span><br><span class="line">    rdx = rsp + <span class="number">0x8</span>;</span><br><span class="line">    esi = <span class="number">0x4025cf</span>;</span><br><span class="line">    eax = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">sccanf</span>(rdi, esi, rdx, rcx);</span><br><span class="line">    <span class="keyword">if</span> (eax &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    <span class="keyword">if</span>(*(rsp + <span class="number">8</span>) &gt; <span class="number">7</span>) &#123;</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">goto</span> *(<span class="number">0x402470</span>+rax*<span class="number">8</span>);</span><br><span class="line"><span class="number">400f</span>7c：</span><br><span class="line">    eax = <span class="number">0xcf</span>;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>be;</span><br><span class="line"><span class="number">400f</span>83：</span><br><span class="line">    eax = <span class="number">0x2c3</span>;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>be;</span><br><span class="line"><span class="number">400f</span>8a:</span><br><span class="line">    eax = <span class="number">0x100</span>;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>be;</span><br><span class="line"><span class="number">400f</span>91:</span><br><span class="line">    eax = <span class="number">0x185</span>;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>be;</span><br><span class="line"><span class="number">400f</span>98:</span><br><span class="line">    eax = <span class="number">0xce</span>;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>be;</span><br><span class="line"><span class="number">400f</span>9f:</span><br><span class="line">    eax = <span class="number">0x2aa</span>;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>be;</span><br><span class="line"><span class="number">400f</span>a6:</span><br><span class="line">    eax = <span class="number">0x147</span>;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>be;</span><br><span class="line">    eax = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">400f</span>be;</span><br><span class="line"><span class="number">400f</span>b9:</span><br><span class="line">    eax = <span class="number">0x137</span>;</span><br><span class="line"><span class="number">400f</span>be:</span><br><span class="line">    <span class="keyword">if</span> (eax != *(rsp+<span class="number">0xc</span>))</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    retq;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h3><p>通过gdb发现sscanf的输入是俩个%d，也就是输出了俩个整形</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(gdb) x/s <span class="number">0x4025cf</span></span><br><span class="line"><span class="number">0x4025cf</span>:       <span class="string">&quot;%d %d&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>根据0x400f6a处的cmp指令，发现第一个参数不能大于7，0x400f75处jmpq *0x402470(,%rax,8)是一个间接跳转指令, 可以看出这段代码是典型的switch语句，跳转表就存在于0x402470。%rax取值为[0, 7]，代表switch语句中8条不同的case。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(gdb) x/<span class="number">8</span>g <span class="number">0x402470</span></span><br><span class="line"><span class="number">0x402470</span>:       <span class="number">0x0000000000400f7c</span>      <span class="number">0x0000000000400fb9</span></span><br><span class="line"><span class="number">0x402480</span>:       <span class="number">0x0000000000400f83</span>      <span class="number">0x0000000000400f8a</span></span><br><span class="line"><span class="number">0x402490</span>:       <span class="number">0x0000000000400f91</span>      <span class="number">0x0000000000400f98</span></span><br><span class="line"><span class="number">0x4024a0</span>:       <span class="number">0x0000000000400f9f</span>      <span class="number">0x0000000000400fa6</span></span><br></pre></td></tr></table></figure>
-
-<p>举例，第一个整数取0时，会跳转到0x400f7c, 将0xcf赋给%rax，0x400fbe处再判断$rax和第二个整数是否相等。因此0 207为满足条件的一组解。依次类推，一共得到8组解，答案不唯一，任选一种即可：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> <span class="number">207</span></span><br><span class="line"><span class="number">1</span> <span class="number">311</span></span><br><span class="line"><span class="number">2</span> <span class="number">707</span></span><br><span class="line"><span class="number">3</span> <span class="number">256</span></span><br><span class="line"><span class="number">4</span> <span class="number">389</span></span><br><span class="line"><span class="number">5</span> <span class="number">206</span></span><br><span class="line"><span class="number">6</span> <span class="number">682</span></span><br><span class="line"><span class="number">7</span> <span class="number">327</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="伪代码-2"><a href="#伪代码-2" class="headerlink" title="伪代码"></a>伪代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">phase_3</span><span class="params">(<span class="type">char</span>* output)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">sscanf</span>(output, <span class="string">&quot;%d %d&quot;</span>, &amp;x, &amp;y) &lt;= <span class="number">1</span>)</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    <span class="keyword">if</span>(x &gt; <span class="number">7</span>)</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="keyword">switch</span>(x) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">        num = <span class="number">207</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        num = <span class="number">311</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        num = <span class="number">707</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">        num = <span class="number">256</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">        num = <span class="number">389</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">        num = <span class="number">206</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">        num = <span class="number">682</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">        num = <span class="number">327</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (num != y)</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="phase-4"><a href="#phase-4" class="headerlink" title="phase_4"></a>phase_4</h2><h3 id="汇编代码-3"><a href="#汇编代码-3" class="headerlink" title="汇编代码"></a>汇编代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">000000000040100</span>c &lt;phase_4&gt;:</span><br><span class="line">  <span class="number">40100</span>c:   <span class="number">48</span> <span class="number">83</span> ec <span class="number">18</span>             sub    $<span class="number">0x18</span>,%rsp</span><br><span class="line">  <span class="number">401010</span>:   <span class="number">48</span> <span class="number">8</span>d <span class="number">4</span>c <span class="number">24</span> <span class="number">0</span>c          lea    <span class="number">0xc</span>(%rsp),%rcx        # 第二个整数，用$rcx保存</span><br><span class="line">  <span class="number">401015</span>:   <span class="number">48</span> <span class="number">8</span>d <span class="number">54</span> <span class="number">24</span> <span class="number">08</span>          lea    <span class="number">0x8</span>(%rsp),%rdx        # 第一个整数，用%rdx保存</span><br><span class="line">  <span class="number">40101</span>a:   be cf <span class="number">25</span> <span class="number">40</span> <span class="number">00</span>          mov    $<span class="number">0x4025cf</span>,%esi        # %rsi处字符串: <span class="string">&quot;%d %d&quot;</span></span><br><span class="line">  <span class="number">40101f</span>:   b8 <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x0</span>,%eax</span><br><span class="line">  <span class="number">401024</span>:   e8 c7 fb ff ff          callq  <span class="number">400b</span>f0 &lt;__isoc99_sscanf@plt&gt;</span><br><span class="line">  <span class="number">401029</span>:   <span class="number">83</span> f8 <span class="number">02</span>                cmp    $<span class="number">0x2</span>,%eax            </span><br><span class="line">  <span class="number">40102</span>c:   <span class="number">75</span> <span class="number">07</span>                   jne    <span class="number">401035</span> &lt;phase_4+<span class="number">0x29</span>&gt;</span><br><span class="line">  <span class="number">40102</span>e:   <span class="number">83</span> <span class="number">7</span>c <span class="number">24</span> <span class="number">08</span> <span class="number">0</span>e          cmpl   $<span class="number">0xe</span>,<span class="number">0x8</span>(%rsp)        # 将第一个整数和<span class="number">14</span>比较</span><br><span class="line">  <span class="number">401033</span>:   <span class="number">76</span> <span class="number">05</span>                   jbe    <span class="number">40103</span>a &lt;phase_4+<span class="number">0x2e</span>&gt;# 如果不大于<span class="number">14</span>跳转，否则引爆炸弹</span><br><span class="line">  <span class="number">401035</span>:   e8 <span class="number">00</span> <span class="number">04</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">40103</span>a:   ba <span class="number">0</span>e <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0xe</span>,%edx             # func4函数的第一个入参，初值为<span class="number">14</span></span><br><span class="line">  <span class="number">40103f</span>:   be <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x0</span>,%esi             # func4函数的第二个入参，初值为<span class="number">0</span>        </span><br><span class="line">  <span class="number">401044</span>:   <span class="number">8b</span> <span class="number">7</span>c <span class="number">24</span> <span class="number">08</span>             mov    <span class="number">0x8</span>(%rsp),%edi         # func4函数的第三个入参，初值为输入的第一个整数</span><br><span class="line">  <span class="number">401048</span>:   e8 <span class="number">81</span> ff ff ff          callq  <span class="number">400f</span>ce &lt;func4&gt;        # 调用func4, func4为递归函数</span><br><span class="line">  <span class="number">40104</span>d:   <span class="number">85</span> c0                   test   %eax,%eax            # func4函数必须返回<span class="number">0</span>，否则爆炸</span><br><span class="line">  <span class="number">40104f</span>:   <span class="number">75</span> <span class="number">07</span>                   jne    <span class="number">401058</span> &lt;phase_4+<span class="number">0x4c</span>&gt;</span><br><span class="line">  <span class="number">401051</span>:   <span class="number">83</span> <span class="number">7</span>c <span class="number">24</span> <span class="number">0</span>c <span class="number">00</span>          cmpl   $<span class="number">0x0</span>,<span class="number">0xc</span>(%rsp)        # 第二个整数必须为<span class="number">0</span>， 否则爆炸</span><br><span class="line">  <span class="number">401056</span>:   <span class="number">74</span> <span class="number">05</span>                   je     <span class="number">40105</span>d &lt;phase_4+<span class="number">0x51</span>&gt;</span><br><span class="line">  <span class="number">401058</span>:   e8 dd <span class="number">03</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">40105</span>d:   <span class="number">48</span> <span class="number">83</span> c4 <span class="number">18</span>             add    $<span class="number">0x18</span>,%rsp</span><br><span class="line">  <span class="number">401061</span>:   c3                      retq</span><br></pre></td></tr></table></figure>
-
-<p>逻辑后：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">phase_4</span>(rdi)</span><br><span class="line">&#123;</span><br><span class="line">    # 省略分配栈上空间</span><br><span class="line">    rcx = rsp + <span class="number">12</span>;            <span class="meta"># sscanf 参数 4</span></span><br><span class="line">    rdx = rsp + <span class="number">8</span>;            <span class="meta"># sscanf 参数 3</span></span><br><span class="line">    rsi = <span class="number">0x4025cf</span>;            <span class="meta"># sscanf 参数 2</span></span><br><span class="line">    rax = <span class="number">0</span>;</span><br><span class="line">    callq sscanf;</span><br><span class="line">    <span class="keyword">if</span> (rax != <span class="number">2</span>) &#123;            <span class="meta"># sscanf 返回值判断</span></span><br><span class="line">        <span class="keyword">goto</span> <span class="number">401035</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">0x8</span>(rsp) &lt;= <span class="number">14</span>) &#123;    # 第一个数字</span><br><span class="line">        <span class="keyword">goto</span> <span class="number">40103</span>a;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="number">401035</span>:</span><br><span class="line">    <span class="keyword">goto</span> explode_bomb;</span><br><span class="line"><span class="number">40103</span>a:</span><br><span class="line">    edx = <span class="number">14</span>;            # func4 参数 <span class="number">3</span></span><br><span class="line">    rsi = <span class="number">0</span>;            # func4 参数 <span class="number">2</span></span><br><span class="line">    rdi = <span class="number">0x8</span>(rsp);        # func4 参数 <span class="number">1</span></span><br><span class="line">    <span class="keyword">goto</span> func4;</span><br><span class="line">    <span class="keyword">if</span> (rax != <span class="number">0</span>) &#123;        # func4 返回值判断</span><br><span class="line">        <span class="keyword">goto</span> <span class="number">401058</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">0xc</span>(rsp) == <span class="number">0</span>) &#123;    # # 第二个数字</span><br><span class="line">        <span class="keyword">goto</span> <span class="number">40105</span>d;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="number">401058</span>:</span><br><span class="line">    <span class="keyword">goto</span> exlode_bomb;</span><br><span class="line"><span class="number">40105</span>d:</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="分析-3"><a href="#分析-3" class="headerlink" title="分析"></a>分析</h3><p>同样的，先确认输入字符串的格式，查看0x4025cf处的格式化字符串</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(gdb) x/s <span class="number">0x4025cf</span></span><br><span class="line"><span class="number">0x4025cf</span>:       <span class="string">&quot;%d %d&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>第一个参数位于%rsp + 8， 第二个参数位于%rsp + 12<br>由<br><code>40102e:   83 7c 24 08 0e          cmpl   $0xe,0x8(%rsp)        # 将第一个整数和14比较   401033:   76 05                   jbe    40103a &lt;phase_4+0x2e&gt;# 如果不大于14跳转，否则引爆炸弹</code>得知第一个整数必须不大于14， 否则引爆炸弹。<br>在0x401048处调用func4函数，并判断该函数返回值是否为0，不等于0则引爆炸弹。<br>由<br><code> 40103a:   ba 0e 00 00 00          mov    $0xe,%edx             # func4函数的第一个入参，初值为14   40103f:   be 00 00 00 00          mov    $0x0,%esi             # func4函数的第二个入参，初值为0           401044:   8b 7c 24 08             mov    0x8(%rsp),%edi         # func4函数的第三个入参，初值为输入的第一个整数   401048:   e8 81 ff ff ff          callq  400fce &lt;func4&gt;        # 调用func4, func4为递归函数</code><br>  得知，调用func4函数并func4函数接受三个入参，且三个参数的初始值从左到右分别为输入的第一个整数,14, 0。<br>  下面展示func4的代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0000000000400f</span>ce &lt;func4&gt;:</span><br><span class="line">  <span class="number">400f</span>ce:    <span class="number">48</span> <span class="number">83</span> ec <span class="number">08</span>              sub    $<span class="number">0x8</span>,%rsp</span><br><span class="line">  <span class="number">400f</span>d2:    <span class="number">89</span> d0                    mov    %edx,%eax</span><br><span class="line">  <span class="number">400f</span>d4:    <span class="number">29</span> f0                    sub    %esi,%eax</span><br><span class="line">  <span class="number">400f</span>d6:    <span class="number">89</span> c1                    mov    %eax,%ecx</span><br><span class="line">  <span class="number">400f</span>d8:    c1 e9 <span class="number">1f</span>                 shr    $<span class="number">0x1f</span>,%ecx</span><br><span class="line">  <span class="number">400f</span>db:    <span class="number">01</span> c8                    add    %ecx,%eax</span><br><span class="line">  <span class="number">400f</span>dd:    d1 f8                    sar    %eax</span><br><span class="line">  <span class="number">400f</span>df:    <span class="number">8</span>d <span class="number">0</span>c <span class="number">30</span>                 <span class="built_in">lea</span>    (%rax,%rsi,<span class="number">1</span>),%ecx</span><br><span class="line">  <span class="number">400f</span>e2:    <span class="number">39</span> f9                    cmp    %edi,%ecx</span><br><span class="line">  <span class="number">400f</span>e4:    <span class="number">7</span>e <span class="number">0</span>c                    jle    <span class="number">400f</span>f2 &lt;func4+<span class="number">0x24</span>&gt;</span><br><span class="line">  <span class="number">400f</span>e6:    <span class="number">8</span>d <span class="number">51</span> ff                 lea    <span class="number">-0x1</span>(%rcx),%edx</span><br><span class="line">  <span class="number">400f</span>e9:    e8 e0 ff ff ff           callq  <span class="number">400f</span>ce &lt;func4&gt;</span><br><span class="line">  <span class="number">400f</span>ee:    <span class="number">01</span> c0                    add    %eax,%eax</span><br><span class="line">  <span class="number">400f</span>f0:    eb <span class="number">15</span>                    jmp    <span class="number">401007</span> &lt;func4+<span class="number">0x39</span>&gt;</span><br><span class="line">  <span class="number">400f</span>f2:    b8 <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>           mov    $<span class="number">0x0</span>,%eax</span><br><span class="line">  <span class="number">400f</span>f7:    <span class="number">39</span> f9                    cmp    %edi,%ecx</span><br><span class="line">  <span class="number">400f</span>f9:    <span class="number">7</span>d <span class="number">0</span>c                    jge    <span class="number">401007</span> &lt;func4+<span class="number">0x39</span>&gt;</span><br><span class="line">  <span class="number">400f</span>fb:    <span class="number">8</span>d <span class="number">71</span> <span class="number">01</span>                 lea    <span class="number">0x1</span>(%rcx),%esi</span><br><span class="line">  <span class="number">400f</span>fe:    e8 cb ff ff ff           callq  <span class="number">400f</span>ce &lt;func4&gt;</span><br><span class="line">  <span class="number">401003</span>:    <span class="number">8</span>d <span class="number">44</span> <span class="number">00</span> <span class="number">01</span>              lea    <span class="number">0x1</span>(%rax,%rax,<span class="number">1</span>),%eax</span><br><span class="line">  <span class="number">401007</span>:    <span class="number">48</span> <span class="number">83</span> c4 <span class="number">08</span>              add    $<span class="number">0x8</span>,%rsp</span><br><span class="line">  <span class="number">40100b</span>:    c3                       retq   </span><br></pre></td></tr></table></figure>
-
-<p>下面是C语言写出的：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">phase_4</span><span class="params">(<span class="type">char</span>* input)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line">    <span class="type">int</span> ret = <span class="built_in">sscanf</span>(input, <span class="string">&quot;%d %d&quot;</span>, &amp;x, &amp;y);</span><br><span class="line">    <span class="keyword">if</span> (ret != <span class="number">2</span> || x &gt; <span class="number">14</span>) &#123;</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="type">int</span> ret = <span class="built_in">func4</span>(x, <span class="number">0</span>, <span class="number">14</span>);</span><br><span class="line">        <span class="keyword">if</span> (ret != <span class="number">0</span> || y != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="built_in">explode_bomb</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中c其实是通过 (b-a)&#x2F;2 + a &#x3D; b&#x2F;2 + a&#x2F;2 &#x3D; c 得到，其中a和b的初始值是0，14，因此c的初始值是 0&#x2F;2+14&#x2F;2 &#x3D; 7。<br>所以事实上 c 是求 (b-a)&#x2F;2，然后通过 c 与 x 进行比较决定不同的递归分支，因此这是递归版的二分法。<br>因此func4的功能：</p>
-<blockquote>
-<p>二分法找出元素x，目标值在数组的前半部分则返回奇数，后半部分则返回偶数； 找到元素x返回0；<br>如果目标值在二分查找过程中一直在左半边，则会返回0。</p>
-</blockquote>
-<p>所以答案是：<br>0 0<br>1 0<br>3 0<br>7 0</p>
-<h3 id="伪代码-3"><a href="#伪代码-3" class="headerlink" title="伪代码"></a>伪代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">phase_4</span><span class="params">(<span class="type">char</span>* input)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line">    <span class="type">int</span> ret = <span class="built_in">sscanf</span>(input, <span class="string">&quot;%d %d&quot;</span>, &amp;x, &amp;y);</span><br><span class="line">    <span class="keyword">if</span> (ret != <span class="number">2</span> || x &gt; <span class="number">14</span>) &#123;</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="type">int</span> ret = <span class="built_in">func4</span>(x, <span class="number">0</span>, <span class="number">14</span>);</span><br><span class="line">        <span class="keyword">if</span> (ret != <span class="number">0</span> || y != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="built_in">explode_bomb</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="phase-5"><a href="#phase-5" class="headerlink" title="phase_5"></a>phase_5</h2><h3 id="汇编代码-4"><a href="#汇编代码-4" class="headerlink" title="汇编代码"></a>汇编代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0000000000401062</span> &lt;phase_5&gt;:</span><br><span class="line">  <span class="number">401062</span>:   <span class="number">53</span>                      push   %rbx</span><br><span class="line">  <span class="number">401063</span>:   <span class="number">48</span> <span class="number">83</span> ec <span class="number">20</span>             sub    $<span class="number">0x20</span>,%rsp</span><br><span class="line">  <span class="number">401067</span>:   <span class="number">48</span> <span class="number">89</span> fb                mov    %rdi,%rbx            <span class="meta"># rbx保存输入字符串</span></span><br><span class="line">  <span class="number">40106</span>a:   <span class="number">64</span> <span class="number">48</span> <span class="number">8b</span> <span class="number">04</span> <span class="number">25</span> <span class="number">28</span> <span class="number">00</span>    mov    %fs:<span class="number">0x28</span>,%rax</span><br><span class="line">  <span class="number">401071</span>:   <span class="number">00</span> <span class="number">00</span></span><br><span class="line">  <span class="number">401073</span>:   <span class="number">48</span> <span class="number">89</span> <span class="number">44</span> <span class="number">24</span> <span class="number">18</span>          mov    %rax,<span class="number">0x18</span>(%rsp)</span><br><span class="line">  <span class="number">401078</span>:   <span class="number">31</span> c0                   <span class="keyword">xor</span>    %eax,%eax</span><br><span class="line">  <span class="number">40107</span>a:   e8 <span class="number">9</span>c <span class="number">02</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40131b</span> &lt;string_length&gt;</span><br><span class="line">  <span class="number">40107f</span>:   <span class="number">83</span> f8 <span class="number">06</span>                cmp    $<span class="number">0x6</span>,%eax            # 输入字符串的长度必须为<span class="number">6</span>,否则爆炸</span><br><span class="line">  <span class="number">401082</span>:   <span class="number">74</span> <span class="number">4</span>e                   je     <span class="number">4010</span>d2 &lt;phase_5+<span class="number">0x70</span>&gt;</span><br><span class="line">  <span class="number">401084</span>:   e8 b1 <span class="number">03</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">401089</span>:   eb <span class="number">47</span>                   jmp    <span class="number">4010</span>d2 &lt;phase_5+<span class="number">0x70</span>&gt;</span><br><span class="line">  <span class="number">40108b</span>:   <span class="number">0f</span> b6 <span class="number">0</span>c <span class="number">03</span>             <span class="built_in">movzbl</span> (%rbx,%rax,<span class="number">1</span>),%ecx</span><br><span class="line">  <span class="number">40108f</span>:   <span class="number">88</span> <span class="number">0</span>c <span class="number">24</span>                mov    %cl,(%rsp)</span><br><span class="line">  <span class="number">401092</span>:   <span class="number">48</span> <span class="number">8b</span> <span class="number">14</span> <span class="number">24</span>             <span class="built_in">mov</span>    (%rsp),%rdx</span><br><span class="line">  <span class="number">401096</span>:   <span class="number">83</span> e2 <span class="number">0f</span>                <span class="keyword">and</span>    $<span class="number">0xf</span>,%edx             # 将当前字符与上<span class="number">0xf</span>，结果保存在%edx</span><br><span class="line">  <span class="number">401099</span>:   <span class="number">0f</span> b6 <span class="number">92</span> b0 <span class="number">24</span> <span class="number">40</span> <span class="number">00</span>    movzbl <span class="number">0x4024b0</span>(%rdx),%edx  # 将(<span class="number">0x4024b0</span>+%edx)处的字符保存在%rdx</span><br><span class="line">  <span class="number">4010</span>a0:   <span class="number">88</span> <span class="number">54</span> <span class="number">04</span> <span class="number">10</span>             mov    %dl,<span class="number">0x10</span>(%rsp,%rax,<span class="number">1</span>)</span><br><span class="line">  <span class="number">4010</span>a4:   <span class="number">48</span> <span class="number">83</span> c0 <span class="number">01</span>             add    $<span class="number">0x1</span>,%rax            # 每次循环%rax加<span class="number">1</span></span><br><span class="line">  <span class="number">4010</span>a8:   <span class="number">48</span> <span class="number">83</span> f8 <span class="number">06</span>             cmp    $<span class="number">0x6</span>,%rax            # 用%rax循环计数，循环<span class="number">6</span>次</span><br><span class="line">  <span class="number">4010</span>ac:   <span class="number">75</span> dd                   jne    <span class="number">40108b</span> &lt;phase_5+<span class="number">0x29</span>&gt;</span><br><span class="line">  <span class="number">4010</span>ae:   c6 <span class="number">44</span> <span class="number">24</span> <span class="number">16</span> <span class="number">00</span>          movb   $<span class="number">0x0</span>,<span class="number">0x16</span>(%rsp)</span><br><span class="line">  <span class="number">4010b</span>3:   be <span class="number">5</span>e <span class="number">24</span> <span class="number">40</span> <span class="number">00</span>          mov    $<span class="number">0x40245e</span>,%esi        # <span class="number">0x40245e</span>处字符串为flyers</span><br><span class="line">  <span class="number">4010b</span>8:   <span class="number">48</span> <span class="number">8</span>d <span class="number">7</span>c <span class="number">24</span> <span class="number">10</span>          lea    <span class="number">0x10</span>(%rsp),%rdi        # 这里需要构造输入串，使得(%rsp+<span class="number">0x10</span>)处的串等于<span class="string">&quot;flyers&quot;</span></span><br><span class="line">  <span class="number">4010b</span>d:   e8 <span class="number">76</span> <span class="number">02</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">401338</span> &lt;strings_not_equal&gt;</span><br><span class="line">  <span class="number">4010</span>c2:   <span class="number">85</span> c0                   test   %eax,%eax</span><br><span class="line">  <span class="number">4010</span>c4:   <span class="number">74</span> <span class="number">13</span>                   je     <span class="number">4010</span>d9 &lt;phase_5+<span class="number">0x77</span>&gt;</span><br><span class="line">  <span class="number">4010</span>c6:   e8 <span class="number">6f</span> <span class="number">03</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">4010</span>cb:   <span class="number">0f</span> <span class="number">1f</span> <span class="number">44</span> <span class="number">00</span> <span class="number">00</span>          nopl   <span class="number">0x0</span>(%rax,%rax,<span class="number">1</span>)</span><br><span class="line">  <span class="number">4010</span>d0:   eb <span class="number">07</span>                   jmp    <span class="number">4010</span>d9 &lt;phase_5+<span class="number">0x77</span>&gt;</span><br><span class="line">  <span class="number">4010</span>d2:   b8 <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x0</span>,%eax            # 循环开始，eax初值为<span class="number">0</span></span><br><span class="line">  <span class="number">4010</span>d7:   eb b2                   jmp    <span class="number">40108b</span> &lt;phase_5+<span class="number">0x29</span>&gt;</span><br><span class="line">  <span class="number">4010</span>d9:   <span class="number">48</span> <span class="number">8b</span> <span class="number">44</span> <span class="number">24</span> <span class="number">18</span>          mov    <span class="number">0x18</span>(%rsp),%rax</span><br><span class="line">  <span class="number">4010</span>de:   <span class="number">64</span> <span class="number">48</span> <span class="number">33</span> <span class="number">04</span> <span class="number">25</span> <span class="number">28</span> <span class="number">00</span>    <span class="keyword">xor</span>    %fs:<span class="number">0x28</span>,%rax</span><br><span class="line">  <span class="number">4010e5</span>:   <span class="number">00</span> <span class="number">00</span></span><br><span class="line">  <span class="number">4010e7</span>:   <span class="number">74</span> <span class="number">05</span>                   je     <span class="number">4010</span>ee &lt;phase_5+<span class="number">0x8c</span>&gt;</span><br><span class="line">  <span class="number">4010e9</span>:   e8 <span class="number">42</span> fa ff ff          callq  <span class="number">400b</span>30 &lt;__stack_chk_fail@plt&gt;</span><br><span class="line">  <span class="number">4010</span>ee:   <span class="number">48</span> <span class="number">83</span> c4 <span class="number">20</span>             add    $<span class="number">0x20</span>,%rsp</span><br><span class="line">  <span class="number">4010f</span>2:   <span class="number">5b</span>                      pop    %rbx</span><br><span class="line">  <span class="number">4010f</span>3:   c3                      retq</span><br></pre></td></tr></table></figure>
-
-<p>可读性分析：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">phase_5</span>(rdx)</span><br><span class="line">&#123;</span><br><span class="line">    rbx = rdi;</span><br><span class="line">    rax = fs:<span class="number">0x28</span>;                # 金丝雀</span><br><span class="line">    *(rsp+<span class="number">0x18</span>) = rax;</span><br><span class="line">    eax = eax ^ eax;            # 清<span class="number">0</span></span><br><span class="line">    callq string_length;        # 计算字符串长度</span><br><span class="line">    <span class="keyword">if</span> (eax == <span class="number">6</span>) &#123;</span><br><span class="line">        <span class="keyword">goto</span> <span class="number">4010</span>d2;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> callq explode_bomb;</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">4010</span>d2;</span><br><span class="line"><span class="number">40108b</span>:</span><br><span class="line">    ecx = rbx + rax;</span><br><span class="line">    *rsp = cl;</span><br><span class="line">    rdx = *rsp;</span><br><span class="line">    edx = edx &amp; <span class="number">0xf</span>;</span><br><span class="line">    edx = rdx + <span class="number">0x4024b0</span>;</span><br><span class="line">    *(rsp+rax+<span class="number">0x10</span>) = dl;    # 数组操作</span><br><span class="line">    rax += <span class="number">1</span>;                # 自增</span><br><span class="line">    <span class="keyword">if</span> (rax != <span class="number">6</span>)            # 循环退出条件</span><br><span class="line">        <span class="keyword">goto</span> <span class="number">40108b</span>;</span><br><span class="line">    *(rsp + <span class="number">0x16</span>) = <span class="number">0</span>;</span><br><span class="line">    esi = <span class="number">0x40245e</span>;</span><br><span class="line">    rdi = rsp + <span class="number">10</span>;</span><br><span class="line">    callq strings_not_equal;</span><br><span class="line">    <span class="keyword">if</span> (eax == <span class="number">0</span>)</span><br><span class="line">        callq explode_bomb;</span><br><span class="line">    nopl</span><br><span class="line">    <span class="keyword">goto</span> <span class="number">4010</span>d9;</span><br><span class="line"><span class="number">4010</span>d2:</span><br><span class="line">    eax = <span class="number">0</span>;                <span class="meta"># init</span></span><br><span class="line">    <span class="keyword">goto</span> <span class="number">40108b</span>;            # 循环</span><br><span class="line"><span class="number">4010</span>d9:</span><br><span class="line">    rax = *(rsp + <span class="number">0x18</span>);</span><br><span class="line">    rax = rax ^ fs:<span class="number">0x28</span>;</span><br><span class="line">    <span class="keyword">if</span> (rax == <span class="number">0</span>)            # 栈是否被破坏</span><br><span class="line">        <span class="keyword">goto</span> <span class="number">4010</span>ee;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        callq __stack_chk_fail@plt;</span><br><span class="line"><span class="number">4010</span>ee:</span><br><span class="line">    retq;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="分析-4"><a href="#分析-4" class="headerlink" title="分析"></a>分析</h3><p>首先根据<code>  40107f:   83 f8 06                cmp    $0x6,%eax            # 输入字符串的长度必须为6,否则爆炸</code>得知需要输入一个长度为6的字符串。根据<code>jmp 40108b &lt;phase_5+0x29&gt;</code>，看出这段代码是循环。%eax初始为0， 每次循环将%eax加1，再和6进行比较(0x4010a8)。循环结束后调用strings_not_equal,将0x40245e处的字符串和$rsp + 0x10比较，两个字符串必须相等，否则爆炸。于是我们先去看0x40245e处的字符串</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(gdb) x/s <span class="number">0x40245e</span></span><br><span class="line"><span class="number">0x40245e</span>:       <span class="string">&quot;flyers&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>内容为flyers，从<code>0x401067: mov %rdi,%rbx</code>看出， $rsp + 0x10处的字符串是依次将%rbx的每一个字符先与0xf做与运算，然后加上0x4024b0得到新的地址x, 最后取地址x处的字符作为输出；循环结束后，输出一个长度为6的字符串。于是我们再查看0x4024b0处的内容</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(gdb) x/<span class="number">16</span>c <span class="number">0x4024b0</span></span><br><span class="line"><span class="number">0x4024b0</span> &lt;array<span class="number">.3449</span>&gt;  : <span class="number">109</span> <span class="string">&#x27;m&#x27;</span> <span class="number">97</span> <span class="string">&#x27;a&#x27;</span>  <span class="number">100</span> <span class="string">&#x27;d&#x27;</span> <span class="number">117</span> <span class="string">&#x27;u&#x27;</span> <span class="number">105</span> <span class="string">&#x27;i&#x27;</span> <span class="number">101</span> <span class="string">&#x27;e&#x27;</span> <span class="number">114</span> <span class="string">&#x27;r&#x27;</span> <span class="number">115</span> <span class="string">&#x27;s&#x27;</span></span><br><span class="line"><span class="number">0x4024b8</span> &lt;array<span class="number">.3449</span>+<span class="number">8</span>&gt;: <span class="number">110</span> <span class="string">&#x27;n&#x27;</span> <span class="number">102</span> <span class="string">&#x27;f&#x27;</span> <span class="number">111</span> <span class="string">&#x27;o&#x27;</span> <span class="number">116</span> <span class="string">&#x27;t&#x27;</span> <span class="number">118</span> <span class="string">&#x27;v&#x27;</span> <span class="number">98</span> <span class="string">&#x27;b&#x27;</span>  <span class="number">121</span> <span class="string">&#x27;y&#x27;</span> <span class="number">108</span> <span class="string">&#x27;l&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>最后可以分析出该代码的功能：</p>
-<ul>
-<li>output长度必须等于6</li>
-<li>生成一个新的字符串str，由output每个字符&amp;0xf作为maduiersnfotvbyl下标得到</li>
-<li>str必须为flyers</li>
-</ul>
-<p>可以发现flyers六个字母对应maduiersnfotvbyl的下标分别为 9 15 14 5 6 7。</p>
-<p>查ascii表，可以找到六个&amp;0xf分别为 9 15 14 5 6 7的字符：<strong>IONEFG</strong></p>
-<h3 id="伪代码-4"><a href="#伪代码-4" class="headerlink" title="伪代码"></a>伪代码</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> g_str[<span class="number">16</span>] = <span class="string">&quot;maduiersnfotvbyl&quot;</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">phase_5</span><span class="params">(<span class="type">char</span>* output)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">char</span> str[<span class="number">7</span>];</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">string_length</span>(output) != <span class="number">6</span>) &#123;</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="comment">// 9 15 14 5 6 7</span></span><br><span class="line">        <span class="comment">// I O N E F G</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i != <span class="number">6</span>; i++) &#123;</span><br><span class="line">        str[i] = g_str[output[i] &amp; <span class="number">0xf</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    str[<span class="number">7</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">string_not_equal</span>(str, <span class="string">&quot;flyers&quot;</span>) != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">explode_bomb</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="phase-6"><a href="#phase-6" class="headerlink" title="phase_6"></a>phase_6</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">00000000004010f</span>4 &lt;phase_6&gt;:</span><br><span class="line">  <span class="number">4010f</span>4:   <span class="number">41</span> <span class="number">56</span>                   push   %r14</span><br><span class="line">  <span class="number">4010f</span>6:   <span class="number">41</span> <span class="number">55</span>                   push   %r13</span><br><span class="line">  <span class="number">4010f</span>8:   <span class="number">41</span> <span class="number">54</span>                   push   %r12</span><br><span class="line">  <span class="number">4010f</span>a:   <span class="number">55</span>                      push   %rbp</span><br><span class="line">  <span class="number">4010f</span>b:   <span class="number">53</span>                      push   %rbx</span><br><span class="line">  <span class="number">4010f</span>c:   <span class="number">48</span> <span class="number">83</span> ec <span class="number">50</span>             sub    $<span class="number">0x50</span>,%rsp</span><br><span class="line">  <span class="number">401100</span>:   <span class="number">49</span> <span class="number">89</span> e5                mov    %rsp,%r13</span><br><span class="line">  <span class="number">401103</span>:   <span class="number">48</span> <span class="number">89</span> e6                mov    %rsp,%rsi</span><br><span class="line">  <span class="number">401106</span>:   e8 <span class="number">51</span> <span class="number">03</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40145</span>c &lt;read_six_numbers&gt; #读<span class="number">6</span>个数，保存到$rsp</span><br><span class="line"># 步骤<span class="number">1</span>：判断输入的每个数是否不超过<span class="number">6</span>，且任意两个数都不相等</span><br><span class="line">  <span class="number">40110b</span>:   <span class="number">49</span> <span class="number">89</span> e6                mov    %rsp,%r14    </span><br><span class="line">  <span class="number">40110</span>e:   <span class="number">41</span> bc <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>       mov    $<span class="number">0x0</span>,%r12d            # %r12d = <span class="number">0</span></span><br><span class="line">  <span class="number">401114</span>:   <span class="number">4</span>c <span class="number">89</span> ed                mov    %r13,%rbp            # 初始$rbp, %r13都指向第一个数</span><br><span class="line">  <span class="number">401117</span>:   <span class="number">41</span> <span class="number">8b</span> <span class="number">45</span> <span class="number">00</span>             mov    <span class="number">0x0</span>(%r13),%eax    </span><br><span class="line">  <span class="number">40111b</span>:   <span class="number">83</span> e8 <span class="number">01</span>                sub    $<span class="number">0x1</span>,%eax</span><br><span class="line">  <span class="number">40111</span>e:   <span class="number">83</span> f8 <span class="number">05</span>                cmp    $<span class="number">0x5</span>,%eax            # 每个数必须小于等于<span class="number">6</span>，否则爆炸</span><br><span class="line">  <span class="number">401121</span>:   <span class="number">76</span> <span class="number">05</span>                   jbe    <span class="number">401128</span> &lt;phase_6+<span class="number">0x34</span>&gt;</span><br><span class="line">  <span class="number">401123</span>:   e8 <span class="number">12</span> <span class="number">03</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">401128</span>:   <span class="number">41</span> <span class="number">83</span> c4 <span class="number">01</span>             add    $<span class="number">0x1</span>,%r12d            # %<span class="number">12</span>d循环计数，每次加<span class="number">1</span></span><br><span class="line">  <span class="number">40112</span>c:   <span class="number">41</span> <span class="number">83</span> fc <span class="number">06</span>             cmp    $<span class="number">0x6</span>,%r12d            # 第一重循环，终止条件是%r12d等于<span class="number">6</span></span><br><span class="line">  <span class="number">401130</span>:   <span class="number">74</span> <span class="number">21</span>                   je     <span class="number">401153</span> &lt;phase_6+<span class="number">0x5f</span>&gt;</span><br><span class="line">  <span class="number">401132</span>:   <span class="number">44</span> <span class="number">89</span> e3                mov    %r12d,%ebx            # %ebx &lt;- %r12d </span><br><span class="line">  <span class="number">401135</span>:   <span class="number">48</span> <span class="number">63</span> c3                movslq %ebx,%rax</span><br><span class="line">  <span class="number">401138</span>:   <span class="number">8b</span> <span class="number">04</span> <span class="number">84</span>                <span class="built_in">mov</span>    (%rsp,%rax,<span class="number">4</span>),%eax    # 将输入的下一个整数保存到%eax</span><br><span class="line">  <span class="number">40113b</span>:   <span class="number">39</span> <span class="number">45</span> <span class="number">00</span>                cmp    %eax,<span class="number">0x0</span>(%rbp)        # 第二重循环，当前整数不能和它后面的任意一个数重复，否则爆炸； 两重循环用于确保输入的<span class="number">6</span>个数没有重复数字，否则引爆炸弹</span><br><span class="line">  <span class="number">40113</span>e:   <span class="number">75</span> <span class="number">05</span>                   jne    <span class="number">401145</span> &lt;phase_6+<span class="number">0x51</span>&gt;</span><br><span class="line">  <span class="number">401140</span>:   e8 f5 <span class="number">02</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">401145</span>:   <span class="number">83</span> c3 <span class="number">01</span>                add    $<span class="number">0x1</span>,%ebx</span><br><span class="line">  <span class="number">401148</span>:   <span class="number">83</span> fb <span class="number">05</span>                cmp    $<span class="number">0x5</span>,%ebx</span><br><span class="line">  <span class="number">40114b</span>:   <span class="number">7</span>e e8                   jle    <span class="number">401135</span> &lt;phase_6+<span class="number">0x41</span>&gt;</span><br><span class="line">  <span class="number">40114</span>d:   <span class="number">49</span> <span class="number">83</span> c5 <span class="number">04</span>             add    $<span class="number">0x4</span>,%r13</span><br><span class="line">  <span class="number">401151</span>:   eb c1                   jmp    <span class="number">401114</span> &lt;phase_6+<span class="number">0x20</span>&gt;</span><br><span class="line"># 步骤<span class="number">2</span>：对于每个输入的整数，做这样的转换：用<span class="number">7</span>减去这个整数的值替换原来的数</span><br><span class="line">  <span class="number">401153</span>:   <span class="number">48</span> <span class="number">8</span>d <span class="number">74</span> <span class="number">24</span> <span class="number">18</span>          lea    <span class="number">0x18</span>(%rsp),%rsi</span><br><span class="line">  <span class="number">401158</span>:   <span class="number">4</span>c <span class="number">89</span> f0                mov    %r14,%rax             </span><br><span class="line">  <span class="number">40115b</span>:   b9 <span class="number">07</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x7</span>,%ecx             # %ecx初值为<span class="number">7</span></span><br><span class="line">  <span class="number">401160</span>:   <span class="number">89</span> ca                   mov    %ecx,%edx</span><br><span class="line">  <span class="number">401162</span>:   <span class="number">2b</span> <span class="number">10</span>                   <span class="built_in">sub</span>    (%rax),%edx             # %edx = <span class="number">7</span> - (%rax), %rax指向当前整数</span><br><span class="line">  <span class="number">401164</span>:   <span class="number">89</span> <span class="number">10</span>                   mov    %edx,(%rax)             # (%rax) = %edx  </span><br><span class="line">  <span class="number">401166</span>:   <span class="number">48</span> <span class="number">83</span> c0 <span class="number">04</span>             add    $<span class="number">0x4</span>,%rax               # 循环每执行一次, %rax指向下一个整数</span><br><span class="line">  <span class="number">40116</span>a:   <span class="number">48</span> <span class="number">39</span> f0                cmp    %rsi,%rax</span><br><span class="line">  <span class="number">40116</span>d:   <span class="number">75</span> f1                   jne    <span class="number">401160</span> &lt;phase_6+<span class="number">0x6c</span>&gt;</span><br><span class="line"># 步骤<span class="number">3</span>：<span class="number">0x6032d0</span>处表示一个包含<span class="number">6</span>个节点的链表， 对于经过步骤<span class="number">2</span>之后转换的每个整数i, 取链表第i个节点的value，依次保存在(%rsp + <span class="number">32</span>)处</span><br><span class="line">  <span class="number">40116f</span>:   be <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x0</span>,%esi   <span class="meta"># esi设为0</span></span><br><span class="line">  <span class="number">401174</span>:   eb <span class="number">21</span>                   jmp    <span class="number">401197</span> &lt;phase_6+<span class="number">0xa3</span>&gt;</span><br><span class="line">  <span class="number">401176</span>:   <span class="number">48</span> <span class="number">8b</span> <span class="number">52</span> <span class="number">08</span>             mov    <span class="number">0x8</span>(%rdx),%rdx        # 访问链表</span><br><span class="line">  <span class="number">40117</span>a:   <span class="number">83</span> c0 <span class="number">01</span>                add    $<span class="number">0x1</span>,%eax</span><br><span class="line">  <span class="number">40117</span>d:   <span class="number">39</span> c8                   cmp    %ecx,%eax</span><br><span class="line">  <span class="number">40117f</span>:   <span class="number">75</span> f5                   jne    <span class="number">401176</span> &lt;phase_6+<span class="number">0x82</span>&gt;</span><br><span class="line">  <span class="number">401181</span>:   eb <span class="number">05</span>                   jmp    <span class="number">401188</span> &lt;phase_6+<span class="number">0x94</span>&gt;</span><br><span class="line">  <span class="number">401183</span>:   ba d0 <span class="number">32</span> <span class="number">60</span> <span class="number">00</span>          mov    $<span class="number">0x6032d0</span>,%edx         # <span class="number">0x6032d0</span>处为链表，包含<span class="number">6</span>个节点</span><br><span class="line">  <span class="number">401188</span>:   <span class="number">48</span> <span class="number">89</span> <span class="number">54</span> <span class="number">74</span> <span class="number">20</span>          mov    %rdx,<span class="number">0x20</span>(%rsp,%rsi,<span class="number">2</span>) #每次取链表中第%ecx个节点的值，保存到$rsp + <span class="number">0x20</span> + <span class="number">2</span> * $rsi处， %ecx表示每个</span><br><span class="line">  <span class="number">40118</span>d:   <span class="number">48</span> <span class="number">83</span> c6 <span class="number">04</span>             add    $<span class="number">0x4</span>,%rsi</span><br><span class="line">  <span class="number">401191</span>:   <span class="number">48</span> <span class="number">83</span> fe <span class="number">18</span>             cmp    $<span class="number">0x18</span>,%rsi</span><br><span class="line">  <span class="number">401195</span>:   <span class="number">74</span> <span class="number">14</span>                   je     <span class="number">4011</span>ab &lt;phase_6+<span class="number">0xb7</span>&gt;</span><br><span class="line">  <span class="number">401197</span>:   <span class="number">8b</span> <span class="number">0</span>c <span class="number">34</span>                <span class="built_in">mov</span>    (%rsp,%rsi,<span class="number">1</span>),%ecx    <span class="meta"># ecx初始值为%rsp, 指向第一个数</span></span><br><span class="line">  <span class="number">40119</span>a:   <span class="number">83</span> f9 <span class="number">01</span>                cmp    $<span class="number">0x1</span>,%ecx</span><br><span class="line">  <span class="number">40119</span>d:   <span class="number">7</span>e e4                   jle    <span class="number">401183</span> &lt;phase_6+<span class="number">0x8f</span>&gt;</span><br><span class="line">  <span class="number">40119f</span>:   b8 <span class="number">01</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x1</span>,%eax</span><br><span class="line">  <span class="number">4011</span>a4:   ba d0 <span class="number">32</span> <span class="number">60</span> <span class="number">00</span>          mov    $<span class="number">0x6032d0</span>,%edx        # <span class="number">0x6032d0</span>处为链表，包含<span class="number">6</span>个节点</span><br><span class="line">  <span class="number">4011</span>a9:   eb cb                   jmp    <span class="number">401176</span> &lt;phase_6+<span class="number">0x82</span>&gt;</span><br><span class="line">  <span class="number">4011</span>ab:   <span class="number">48</span> <span class="number">8b</span> <span class="number">5</span>c <span class="number">24</span> <span class="number">20</span>          mov    <span class="number">0x20</span>(%rsp),%rbx         # 保存<span class="number">6</span>个节点的值</span><br><span class="line">  <span class="number">4011b</span>0:   <span class="number">48</span> <span class="number">8</span>d <span class="number">44</span> <span class="number">24</span> <span class="number">28</span>          lea    <span class="number">0x28</span>(%rsp),%rax</span><br><span class="line">  <span class="number">4011b</span>5:   <span class="number">48</span> <span class="number">8</span>d <span class="number">74</span> <span class="number">24</span> <span class="number">50</span>          lea    <span class="number">0x50</span>(%rsp),%rsi</span><br><span class="line">  <span class="number">4011b</span>a:   <span class="number">48</span> <span class="number">89</span> d9                mov    %rbx,%rcx</span><br><span class="line">  <span class="number">4011b</span>d:   <span class="number">48</span> <span class="number">8b</span> <span class="number">10</span>                <span class="built_in">mov</span>    (%rax),%rdx</span><br><span class="line">  <span class="number">4011</span>c0:   <span class="number">48</span> <span class="number">89</span> <span class="number">51</span> <span class="number">08</span>             mov    %rdx,<span class="number">0x8</span>(%rcx)</span><br><span class="line">  <span class="number">4011</span>c4:   <span class="number">48</span> <span class="number">83</span> c0 <span class="number">08</span>             add    $<span class="number">0x8</span>,%rax</span><br><span class="line">  <span class="number">4011</span>c8:   <span class="number">48</span> <span class="number">39</span> f0                cmp    %rsi,%rax</span><br><span class="line">  <span class="number">4011</span>cb:   <span class="number">74</span> <span class="number">05</span>                   je     <span class="number">4011</span>d2 &lt;phase_6+<span class="number">0xde</span>&gt;</span><br><span class="line">  <span class="number">4011</span>cd:   <span class="number">48</span> <span class="number">89</span> d1                mov    %rdx,%rcx</span><br><span class="line">  <span class="number">4011</span>d0:   eb eb                   jmp    <span class="number">4011b</span>d &lt;phase_6+<span class="number">0xc9</span>&gt;</span><br><span class="line"># <span class="number">4.</span>判断（%rsp + <span class="number">32</span>）处的<span class="number">6</span>个整数是否为降序排列，如不满足条件引爆炸弹</span><br><span class="line">  <span class="number">4011</span>d2:   <span class="number">48</span> c7 <span class="number">42</span> <span class="number">08</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>    movq   $<span class="number">0x0</span>,<span class="number">0x8</span>(%rdx)</span><br><span class="line">  <span class="number">4011</span>d9:   <span class="number">00</span></span><br><span class="line">  <span class="number">4011</span>da:   bd <span class="number">05</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>          mov    $<span class="number">0x5</span>,%ebp</span><br><span class="line">  <span class="number">4011</span>df:   <span class="number">48</span> <span class="number">8b</span> <span class="number">43</span> <span class="number">08</span>             mov    <span class="number">0x8</span>(%rbx),%rax        #将链表下一个节点地址给rax</span><br><span class="line">  <span class="number">4011e3</span>:   <span class="number">8b</span> <span class="number">00</span>                   <span class="built_in">mov</span>    (%rax),%eax            <span class="meta">#eax为链表下一个节点的值</span></span><br><span class="line">  <span class="number">4011e5</span>:   <span class="number">39</span> <span class="number">03</span>                   cmp    %eax,(%rbx)            # 比较前后两个节点的值</span><br><span class="line">  <span class="number">4011e7</span>:   <span class="number">7</span>d <span class="number">05</span>                   jge    <span class="number">4011</span>ee &lt;phase_6+<span class="number">0xfa</span>&gt;#前一个数要大于后一个，否则炸弹爆炸。即必须为降序排列</span><br><span class="line">  <span class="number">4011e9</span>:   e8 <span class="number">4</span>c <span class="number">02</span> <span class="number">00</span> <span class="number">00</span>          callq  <span class="number">40143</span>a &lt;explode_bomb&gt;</span><br><span class="line">  <span class="number">4011</span>ee:   <span class="number">48</span> <span class="number">8b</span> <span class="number">5b</span> <span class="number">08</span>             mov    <span class="number">0x8</span>(%rbx),%rbx</span><br><span class="line">  <span class="number">4011f</span>2:   <span class="number">83</span> ed <span class="number">01</span>                sub    $<span class="number">0x1</span>,%ebp</span><br><span class="line">  <span class="number">4011f</span>5:   <span class="number">75</span> e8                   jne    <span class="number">4011</span>df &lt;phase_6+<span class="number">0xeb</span>&gt;</span><br><span class="line">  <span class="number">4011f</span>7:   <span class="number">48</span> <span class="number">83</span> c4 <span class="number">50</span>             add    $<span class="number">0x50</span>,%rsp</span><br><span class="line">  <span class="number">4011f</span>b:   <span class="number">5b</span>                      pop    %rbx</span><br><span class="line">  <span class="number">4011f</span>c:   <span class="number">5</span>d                      pop    %rbp</span><br><span class="line">  <span class="number">4011f</span>d:   <span class="number">41</span> <span class="number">5</span>c                   pop    %r12</span><br><span class="line">  <span class="number">4011f</span>f:   <span class="number">41</span> <span class="number">5</span>d                   pop    %r13</span><br><span class="line">  <span class="number">401201</span>:   <span class="number">41</span> <span class="number">5</span>e                   pop    %r14</span><br><span class="line">  <span class="number">401203</span>:   c3                      retq</span><br></pre></td></tr></table></figure>
-
-<h3 id="汇编代码-5"><a href="#汇编代码-5" class="headerlink" title="汇编代码"></a>汇编代码</h3><h3 id="分析-5"><a href="#分析-5" class="headerlink" title="分析"></a>分析</h3><p>不会</p>
-<h3 id="伪代码-5"><a href="#伪代码-5" class="headerlink" title="伪代码"></a>伪代码</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://primer-1-wy.github.io/2022/10/24/Hadoop%E4%BD%9C%E4%B8%9A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wy-1226">
-      <meta itemprop="description" content="选择有时候比努力更重要">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wy-1226的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/24/Hadoop%E4%BD%9C%E4%B8%9A/" class="post-title-link" itemprop="url">hadoop!!!</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-10-24 01:33:00 / 修改时间：10:54:39" itemprop="dateCreated datePublished" datetime="2022-10-24T01:33:00+08:00">2022-10-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/coding/" itemprop="url" rel="index"><span itemprop="name">coding</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Hadoop作业"><a href="#Hadoop作业" class="headerlink" title="Hadoop作业"></a>Hadoop作业</h1><p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
-<h2 id="（1）如何安装java虚拟机？"><a href="#（1）如何安装java虚拟机？" class="headerlink" title="（1）如何安装java虚拟机？"></a>（1）如何安装java虚拟机？</h2><h3 id="1-下载jdk"><a href="#1-下载jdk" class="headerlink" title="1.下载jdk"></a>1.下载jdk</h3><ol>
-<li>首先去oracle官网下载对应系统和自己选择的版本的jdk包<br><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">jdk</a>下载的方式可以直接在linux系统上去官网下载或者使用命令行</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.oracle.com/otn/java/jdk/8u271-b09/61ae65e088624f5aaa0b1d2d801acb16/jdk-8u271-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-创建jdk安装目录"><a href="#2-创建jdk安装目录" class="headerlink" title="2.创建jdk安装目录"></a>2.创建jdk安装目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> /usr/java</span><br><span class="line">创建一个 /usr/java 目录</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cp</span> /root/jdk-8u271-linux-x64.tar.gz /usr/java/</span><br><span class="line">将之前下载的 tar 包拷贝到新建的目录下</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-解压jdk"><a href="#3-解压jdk" class="headerlink" title="3.解压jdk"></a>3.解压jdk</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar xzf jdk-8u271-linux-x64.tar.gz -C /usr/java</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4.配置环境变量"></a>4.配置环境变量</h3><p>打开配置文件</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>进入编辑模式后输入以下指令</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1<span class="number">.8</span><span class="number">.0</span>_271</span><br><span class="line">export CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-重新读取环境变量"><a href="#5-重新读取环境变量" class="headerlink" title="5.重新读取环境变量"></a>5.重新读取环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-检查jdk是否安装成功"><a href="#6-检查jdk是否安装成功" class="headerlink" title="6.检查jdk是否安装成功"></a>6.检查jdk是否安装成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line"></span><br><span class="line">java version <span class="string">&quot;1.8.0_271&quot;</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_271-b13)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.271-b13, mixed mode)</span><br></pre></td></tr></table></figure>
-
-<h2 id="（2）为什么要配置ssh免密登录？"><a href="#（2）为什么要配置ssh免密登录？" class="headerlink" title="（2）为什么要配置ssh免密登录？"></a>（2）为什么要配置ssh免密登录？</h2><p>   在集群中，Hadoop控制脚本依赖SSH来执行针对整个集群的操作。例如，某个脚本能够终止并重启集群中的所有守护进程。所以，需要安装SSH，但是，SSH远程登陆的时候，需要密码验证，集群中数千台计算机，数千台计算机都需要手工输入密码，这是不太现实的，所以，就需要配置SSH无密码登录。</p>
-<h2 id="（3）-x2F-etc-x2F-hostname和-x2F-etc-x2F-hosts的作用分别是什么？"><a href="#（3）-x2F-etc-x2F-hostname和-x2F-etc-x2F-hosts的作用分别是什么？" class="headerlink" title="（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？"></a>（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？</h2><h3 id="hostname"><a href="#hostname" class="headerlink" title="hostname"></a>hostname</h3><blockquote>
-<p>1.hostname是主机名，用于在系统中标识一台机器。<br>2.在登陆linux系统后，[root@izm5e9z5o9dc8yjs3vh5mhz ~]，其中@后面的是主机名字，通过主机名字，可以判断登陆的系统。</p>
-</blockquote>
-<h3 id="hosts"><a href="#hosts" class="headerlink" title="hosts"></a>hosts</h3><blockquote>
-<p>1.hosts文件是linux系统中负责ip地址与域名快速解析的文件<br>2.以ASCII格式保存在&#x2F;etc目录下<br>3.文件名为hosts(不同的linux版本，文件也可能不同，比如Debian的对应文件是&#x2F;etc&#x2F;hostname。)<br>4.hosts文件包含了ip地址和主机名之间的映射，包括主机名的别名(在没有域名服务器的情况下，系统上的所有网络程序都通过查询该文件来解析对应于某个主机名的ip地址，否则就需要使用DNS服务程序来解决。)<br>5.通常可以将常用的域名和ip地址映射加入到hosts文件中，实现快速方便的访问<br>6.优先级：dns缓存&gt;hosts&gt;dns服务</p>
-</blockquote>
-<h2 id="（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？"><a href="#（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？" class="headerlink" title="（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？"></a>（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？</h2><p>在hadoop集群中，需要配置的文件主要包括四个，分别是core-site.xml、hdfs-site.xml、mapred-site.xml和yarn-site.xml</p>
-<h3 id="1-core-site-xml"><a href="#1-core-site-xml" class="headerlink" title="1.core-site.xml"></a>1.core-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">       &lt;!--指定namenode的地址--&gt;</span><br><span class="line">   &lt;property&gt;</span><br><span class="line">               &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">               &lt;value&gt;hdfs://DEV2:8020&lt;/value&gt;</span><br><span class="line">   &lt;/property&gt;</span><br><span class="line">   &lt;!--用来指定使用hadoop时产生文件的存放目录--&gt;</span><br><span class="line">   &lt;property&gt;</span><br><span class="line">            &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp&lt;/value&gt; </span><br><span class="line">   &lt;/property&gt;</span><br><span class="line">       &lt;!--用来设置检查点备份日志的最长时间--&gt;</span><br><span class="line">       &lt;name&gt;fs.checkpoint.period&lt;/name&gt; </span><br><span class="line">       &lt;value&gt;3600&lt;/value&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-hdfs-site-xml"><a href="#2-hdfs-site-xml" class="headerlink" title="2.hdfs-site.xml"></a>2.hdfs-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;!--指定hdfs保存数据的副本数量--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">            &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;2&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--指定hdfs中namenode的存储位置--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">             &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt; </span><br><span class="line">             &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp/dfs/name&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--指定hdfs中datanode的存储位置--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">             &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</span><br><span class="line">             &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp/dfs/data&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-mapred-site-xml"><a href="#3-mapred-site-xml" class="headerlink" title="3.mapred-site.xml"></a>3.mapred-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;!--告诉hadoop以后MR(Map/Reduce)运行在YARN上--&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">              &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">              &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">       &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-yarn-site-xml"><a href="#4-yarn-site-xml" class="headerlink" title="4.yarn-site.xml"></a>4.yarn-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">        &lt;!--nomenodeManager获取数据的方式是shuffle--&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">       &lt;!--指定Yarn的老大(ResourceManager)的地址--&gt;     </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">            &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;master&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt; </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--Yarn打印工作日志--&gt;    </span><br><span class="line">    &lt;property&gt;    </span><br><span class="line">        &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt; </span><br><span class="line">        &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;    </span><br><span class="line">    &lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;configuration&gt;</span><br></pre></td></tr></table></figure>
-
-<h1 id="Hadoop作业-1"><a href="#Hadoop作业-1" class="headerlink" title="Hadoop作业"></a>Hadoop作业</h1><p>@<a href="%E7%9B%AE%E5%BD%95">TOC</a></p>
-<h2 id="（1）如何安装java虚拟机？-1"><a href="#（1）如何安装java虚拟机？-1" class="headerlink" title="（1）如何安装java虚拟机？"></a>（1）如何安装java虚拟机？</h2><h3 id="1-下载jdk-1"><a href="#1-下载jdk-1" class="headerlink" title="1.下载jdk"></a>1.下载jdk</h3><ol>
-<li>首先去oracle官网下载对应系统和自己选择的版本的jdk包<br><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">jdk</a>下载的方式可以直接在linux系统上去官网下载或者使用命令行</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.oracle.com/otn/java/jdk/8u271-b09/61ae65e088624f5aaa0b1d2d801acb16/jdk-8u271-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-创建jdk安装目录-1"><a href="#2-创建jdk安装目录-1" class="headerlink" title="2.创建jdk安装目录"></a>2.创建jdk安装目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> /usr/java</span><br><span class="line">创建一个 /usr/java 目录</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cp</span> /root/jdk-8u271-linux-x64.tar.gz /usr/java/</span><br><span class="line">将之前下载的 tar 包拷贝到新建的目录下</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-解压jdk-1"><a href="#3-解压jdk-1" class="headerlink" title="3.解压jdk"></a>3.解压jdk</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar xzf jdk-8u271-linux-x64.tar.gz -C /usr/java</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-配置环境变量-1"><a href="#4-配置环境变量-1" class="headerlink" title="4.配置环境变量"></a>4.配置环境变量</h3><p>打开配置文件</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>进入编辑模式后输入以下指令</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1<span class="number">.8</span><span class="number">.0</span>_271</span><br><span class="line">export CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-重新读取环境变量-1"><a href="#5-重新读取环境变量-1" class="headerlink" title="5.重新读取环境变量"></a>5.重新读取环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-检查jdk是否安装成功-1"><a href="#6-检查jdk是否安装成功-1" class="headerlink" title="6.检查jdk是否安装成功"></a>6.检查jdk是否安装成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line"></span><br><span class="line">java version <span class="string">&quot;1.8.0_271&quot;</span></span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_271-b13)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.271-b13, mixed mode)</span><br></pre></td></tr></table></figure>
-
-<h2 id="（2）为什么要配置ssh免密登录？-1"><a href="#（2）为什么要配置ssh免密登录？-1" class="headerlink" title="（2）为什么要配置ssh免密登录？"></a>（2）为什么要配置ssh免密登录？</h2><p>   在集群中，Hadoop控制脚本依赖SSH来执行针对整个集群的操作。例如，某个脚本能够终止并重启集群中的所有守护进程。所以，需要安装SSH，但是，SSH远程登陆的时候，需要密码验证，集群中数千台计算机，数千台计算机都需要手工输入密码，这是不太现实的，所以，就需要配置SSH无密码登录。</p>
-<h2 id="（3）-x2F-etc-x2F-hostname和-x2F-etc-x2F-hosts的作用分别是什么？-1"><a href="#（3）-x2F-etc-x2F-hostname和-x2F-etc-x2F-hosts的作用分别是什么？-1" class="headerlink" title="（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？"></a>（3）&#x2F;etc&#x2F;hostname和&#x2F;etc&#x2F;hosts的作用分别是什么？</h2><h3 id="hostname-1"><a href="#hostname-1" class="headerlink" title="hostname"></a>hostname</h3><blockquote>
-<p>1.hostname是主机名，用于在系统中标识一台机器。<br>2.在登陆linux系统后，[root@izm5e9z5o9dc8yjs3vh5mhz ~]，其中@后面的是主机名字，通过主机名字，可以判断登陆的系统。</p>
-</blockquote>
-<h3 id="hosts-1"><a href="#hosts-1" class="headerlink" title="hosts"></a>hosts</h3><blockquote>
-<p>1.hosts文件是linux系统中负责ip地址与域名快速解析的文件<br>2.以ASCII格式保存在&#x2F;etc目录下<br>3.文件名为hosts(不同的linux版本，文件也可能不同，比如Debian的对应文件是&#x2F;etc&#x2F;hostname。)<br>4.hosts文件包含了ip地址和主机名之间的映射，包括主机名的别名(在没有域名服务器的情况下，系统上的所有网络程序都通过查询该文件来解析对应于某个主机名的ip地址，否则就需要使用DNS服务程序来解决。)<br>5.通常可以将常用的域名和ip地址映射加入到hosts文件中，实现快速方便的访问<br>6.优先级：dns缓存&gt;hosts&gt;dns服务</p>
-</blockquote>
-<h2 id="（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？-1"><a href="#（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？-1" class="headerlink" title="（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？"></a>（4）Hadoop的四个主要xml配置文件是哪四个，分别用于配置什么参数？</h2><p>在hadoop集群中，需要配置的文件主要包括四个，分别是core-site.xml、hdfs-site.xml、mapred-site.xml和yarn-site.xml</p>
-<h3 id="1-core-site-xml-1"><a href="#1-core-site-xml-1" class="headerlink" title="1.core-site.xml"></a>1.core-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">       &lt;!--指定namenode的地址--&gt;</span><br><span class="line">   &lt;property&gt;</span><br><span class="line">               &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">               &lt;value&gt;hdfs://DEV2:8020&lt;/value&gt;</span><br><span class="line">   &lt;/property&gt;</span><br><span class="line">   &lt;!--用来指定使用hadoop时产生文件的存放目录--&gt;</span><br><span class="line">   &lt;property&gt;</span><br><span class="line">            &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp&lt;/value&gt; </span><br><span class="line">   &lt;/property&gt;</span><br><span class="line">       &lt;!--用来设置检查点备份日志的最长时间--&gt;</span><br><span class="line">       &lt;name&gt;fs.checkpoint.period&lt;/name&gt; </span><br><span class="line">       &lt;value&gt;3600&lt;/value&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-hdfs-site-xml-1"><a href="#2-hdfs-site-xml-1" class="headerlink" title="2.hdfs-site.xml"></a>2.hdfs-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">    &lt;!--指定hdfs保存数据的副本数量--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">            &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;2&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--指定hdfs中namenode的存储位置--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">             &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt; </span><br><span class="line">             &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp/dfs/name&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--指定hdfs中datanode的存储位置--&gt;</span><br><span class="line">    &lt;property&gt;</span><br><span class="line">             &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</span><br><span class="line">             &lt;value&gt;file:/data/hadoop/hadoop-2.6.0/tmp/dfs/data&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-mapred-site-xml-1"><a href="#3-mapred-site-xml-1" class="headerlink" title="3.mapred-site.xml"></a>3.mapred-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;!--告诉hadoop以后MR(Map/Reduce)运行在YARN上--&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">              &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span><br><span class="line">              &lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">       &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-yarn-site-xml-1"><a href="#4-yarn-site-xml-1" class="headerlink" title="4.yarn-site.xml"></a>4.yarn-site.xml</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">        &lt;!--nomenodeManager获取数据的方式是shuffle--&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">       &lt;!--指定Yarn的老大(ResourceManager)的地址--&gt;     </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">            &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;</span><br><span class="line">            &lt;value&gt;master&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt; </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;!--Yarn打印工作日志--&gt;    </span><br><span class="line">    &lt;property&gt;    </span><br><span class="line">        &lt;name&gt;yarn.log-aggregation-enable&lt;/name&gt; </span><br><span class="line">        &lt;value&gt;<span class="literal">true</span>&lt;/value&gt;    </span><br><span class="line">    &lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;configuration&gt;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://primer-1-wy.github.io/2022/10/24/%E9%A6%96%E9%A1%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wy-1226">
-      <meta itemprop="description" content="选择有时候比努力更重要">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wy-1226的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/24/%E9%A6%96%E9%A1%B5/" class="post-title-link" itemprop="url">首页</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-10-24 01:33:00 / 修改时间：11:00:50" itemprop="dateCreated datePublished" datetime="2022-10-24T01:33:00+08:00">2022-10-24</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一名平平无奇的在读CS学生~</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://primer-1-wy.github.io/2022/10/23/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wy-1226">
-      <meta itemprop="description" content="选择有时候比努力更重要">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wy-1226的博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/10/23/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-10-23 01:10:04" itemprop="dateCreated datePublished" datetime="2022-10-23T01:10:04+08:00">2022-10-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-10-24 01:19:19" itemprop="dateModified" datetime="2022-10-24T01:19:19+08:00">2022-10-24</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
+    <main id="main">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> OPEN TO IDEAS &amp; COLLABORATION</p>
+          <h1 id="hero-title">用代码探索世界，<br /><em>把想法变成作品。</em></h1>
+          <p class="hero-summary">你好，我是 <strong>wy-1226</strong>，一名计算机科学学习者与开发者。我喜欢拆解复杂问题，也享受从零构建出真正可用的东西。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">查看我的项目 <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="/archives/">阅读技术博客 <span aria-hidden="true">→</span></a>
           </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
         </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+        <div class="hero-visual reveal" aria-label="个人标识装饰图形">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="portrait-card"><span class="portrait-kicker">HELLO, WORLD</span><strong>WY</strong><span class="portrait-caption">BUILD · LEARN · SHARE</span></div>
+          <span class="floating-tag tag-code">&lt;/&gt;</span><span class="floating-tag tag-data">01</span>
+        </div>
+      </section>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+      <section id="about" class="section shell about-grid">
+        <div class="section-heading reveal">
+          <span class="section-number">01</span>
+          <div><p class="eyebrow">ABOUT ME</p><h2>好奇心，是我的<br />长期驱动力。</h2></div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="lead">我关注计算机科学基础，也热衷于把知识运用到真实项目中。</p>
+          <p>从 C 语言与系统实验，到 Python 数据分析和 Java 应用开发，我在一次次实践中建立自己的技术地图。这个网站既是作品陈列柜，也是我持续学习、整理和分享的地方。</p>
+          <div class="principles">
+            <div><span>01</span><strong>保持好奇</strong><small>追问原理，而不只满足于答案</small></div>
+            <div><span>02</span><strong>动手构建</strong><small>让知识在项目中真正发生</small></div>
+            <div><span>03</span><strong>持续分享</strong><small>用写作沉淀思考与经验</small></div>
+          </div>
+        </div>
+      </section>
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
+      <section id="skills" class="section skill-section">
+        <div class="shell">
+          <div class="section-heading compact reveal"><span class="section-number">02</span><div><p class="eyebrow">TOOLBOX</p><h2>技能与兴趣</h2></div></div>
+          <div class="skills-grid">
+            <article class="skill-card reveal"><span class="skill-index">A</span><h3>编程语言</h3><p>用合适的语言表达思路，并关注清晰、可靠与可维护性。</p><ul class="chip-list"><li>Python</li><li>Java</li><li>C / C++</li><li>SQL</li></ul></article>
+            <article class="skill-card reveal"><span class="skill-index">B</span><h3>数据与应用</h3><p>从数据中寻找规律，构建能够解决实际问题的小型应用。</p><ul class="chip-list"><li>Jupyter</li><li>MySQL</li><li>数据分析</li><li>GUI</li></ul></article>
+            <article class="skill-card reveal"><span class="skill-index">C</span><h3>计算机基础</h3><p>持续补全系统、网络和工程实践方面的基础知识。</p><ul class="chip-list"><li>Linux</li><li>Git</li><li>CS:APP</li><li>Hadoop</li></ul></article>
+          </div>
+        </div>
+      </section>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
+      <section id="projects" class="section shell">
+        <div class="section-heading compact reveal">
+          <span class="section-number">03</span><div><p class="eyebrow">SELECTED WORK</p><h2>精选项目</h2></div>
+          <a class="text-link heading-link" href="https://github.com/Primer-1-wy?tab=repositories" target="_blank" rel="noreferrer">查看全部仓库 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="projects-list">
+          <a class="project-card reveal" href="https://github.com/Primer-1-wy/2022-ShuWeiCup-C" target="_blank" rel="noreferrer"><span class="project-no">01</span><div class="project-main"><div class="project-meta"><span>DATA ANALYSIS</span><span>JUPYTER NOTEBOOK</span></div><h3>数维杯国际挑战赛</h3><p>围绕阿尔兹海默症课题展开的数据分析与建模实践。</p></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+          <a class="project-card reveal" href="https://github.com/Primer-1-wy/2022-Tidy-C" target="_blank" rel="noreferrer"><span class="project-no">02</span><div class="project-main"><div class="project-meta"><span>MODELING</span><span>PYTHON</span></div><h3>泰迪杯 C 题</h3><p>竞赛题目的完整分析过程、模型实现与结果整理。</p></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+          <a class="project-card reveal" href="https://github.com/Primer-1-wy/ClassOn" target="_blank" rel="noreferrer"><span class="project-no">03</span><div class="project-main"><div class="project-meta"><span>APPLICATION</span><span>JAVA</span></div><h3>ClassOn</h3><p>一次面向课程场景的 Java 应用开发与工程实践。</p></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+          <a class="project-card reveal" href="https://github.com/Primer-1-wy/Mysql_python_GUI_Stu" target="_blank" rel="noreferrer"><span class="project-no">04</span><div class="project-main"><div class="project-meta"><span>DESKTOP APP</span><span>PYTHON · MYSQL</span></div><h3>学生信息管理系统</h3><p>结合 Python GUI 与 MySQL 的桌面端数据管理项目。</p></div><span class="project-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">wy-1226</p>
-  <div class="site-description" itemprop="description">选择有时候比努力更重要</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">4</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Primer-1-wy" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Primer-1-wy" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://blog.csdn.net/m0_54015435?spm=1011.2427.3001.5343" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;m0_54015435?spm&#x3D;1011.2427.3001.5343" rel="noopener" target="_blank"><i class="codiepie fa-fw"></i>CSDN</a>
-      </span>
-  </div>
+      <section id="writing" class="section writing-section">
+        <div class="shell">
+          <div class="section-heading compact reveal"><span class="section-number">04</span><div><p class="eyebrow">NOTES &amp; WRITING</p><h2>博客与笔记</h2></div><a class="text-link heading-link" href="/archives/">浏览文章归档 <span aria-hidden="true">→</span></a></div>
+          <div class="posts-grid">
+            <a class="post-card reveal" href="/2022/10/24/Bomb%20Lab!!!/"><div><span class="post-date">2022.10.24</span><span class="post-tag">CS:APP</span></div><h3>Bomb Lab!!!</h3><p>使用反汇编与 GDB 分析 Bomb Lab 各阶段逻辑。</p><span class="read-more">阅读全文 <span aria-hidden="true">→</span></span></a>
+            <a class="post-card reveal" href="/2022/10/24/Hadoop%E4%BD%9C%E4%B8%9A/"><div><span class="post-date">2022.10.24</span><span class="post-tag">DISTRIBUTED</span></div><h3>Hadoop 学习笔记</h3><p>从安装配置到基础概念的 Hadoop 学习记录。</p><span class="read-more">阅读全文 <span aria-hidden="true">→</span></span></a>
+            <a class="post-card post-card-accent reveal" href="/archives/"><div><span class="post-date">ARCHIVE</span><span class="post-tag">MORE</span></div><h3>更多探索，<br />都在路上。</h3><p>查看过往文章，并期待下一篇新的记录。</p><span class="read-more">进入归档 <span aria-hidden="true">→</span></span></a>
+          </div>
+        </div>
+      </section>
 
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
+      <section class="contact shell reveal" aria-labelledby="contact-title">
+        <p class="eyebrow">LET'S CONNECT</p><h2 id="contact-title">有新的想法？<br /><em>一起聊聊吧。</em></h2><p>欢迎交流技术、项目和一切有趣的问题。</p>
+        <a class="button button-primary" href="https://github.com/Primer-1-wy" target="_blank" rel="noreferrer">在 GitHub 找到我 <span aria-hidden="true">↗</span></a>
+      </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">wy-1226</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  
-  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
+    <footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">W</span><span>wy-1226</span></a><p>保持好奇，持续构建。</p><p>© <span id="year">2026</span> wy-1226</p></div></footer>
+  </body>
 </html>
