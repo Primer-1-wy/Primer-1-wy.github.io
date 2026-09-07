@@ -111,4 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
   NexT.boot.registerEvents();
   NexT.boot.refresh();
   NexT.boot.motion();
+
+  var articleStyle = document.createElement('link');
+  articleStyle.rel = 'stylesheet';
+  articleStyle.href = '/css/article.css';
+  document.head.appendChild(articleStyle);
+
+  var articleShell = document.createElement('script');
+  articleShell.src = '/js/article-shell.js';
+  document.body.appendChild(articleShell);
 });
