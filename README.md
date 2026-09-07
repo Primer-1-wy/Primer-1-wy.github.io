@@ -5,8 +5,11 @@ wy-1226 的个人主页与技术博客，发布地址：<https://primer-1-wy.git
 ## 网站结构
 
 - `index.html`：现代个人主页，包含简介、技能、项目和博客入口。
+- `blog/index.html`：独立博客首页，集中展示文章以及归档、分类和标签入口。
 - `css/home.css`：个人主页专用样式，包括响应式布局与深浅色主题。
 - `js/home.js`：主题切换、滚动显示动画和页脚年份。
+- `css/article.css`：文章、归档和其他旧博客页面的现代阅读样式。
+- `js/article-shell.js`：统一博客子页面的导航、主页链接、站点标题和主题切换，由旧博客共用的 `js/next-boot.js` 加载。
 - `images/og.png`：网站链接在社交平台分享时使用的预览图片。
 - `archives/`、`categories/`、`tags/`：原 Hexo 博客的归档页面。
 - `2022/`：原有博客文章。为保证历史链接有效，请勿随意修改目录名称。
@@ -17,17 +20,23 @@ wy-1226 的个人主页与技术博客，发布地址：<https://primer-1-wy.git
 
 编辑 `index.html` 中的个人介绍、技能和联系方式。
 
-### 修改精选项目
+### 修改项目展示
 
-在 `index.html` 的 `projects` 区域增删项目卡片，同时确认项目链接可以公开访问。
+在 `index.html` 的 `projects` 区域增删项目卡片，同时确认项目链接可以公开访问。项目尚未准备好时保留“项目正在整理中”的占位卡片。
 
-### 更新首页博客入口
+### 更新博客内容
 
-在 `index.html` 的 `writing` 区域更新文章标题、摘要、日期和链接。旧文章页面仍使用原 Hexo 样式。
+在 `blog/index.html` 的 `blog-list` 区域更新文章标题、摘要、日期和链接；需要在个人主页推荐时，再同步修改 `index.html` 的 `writing` 区域。旧文章内容与地址继续保留。
+
+文章页内容仍来自原 Hexo 静态文件，现代阅读外观由 `css/article.css` 和 `js/article-shell.js` 统一维护。
+
+### 文章管理方式
+
+GitHub Pages 只负责托管静态文件，目前没有站内登录或数据库后台。现阶段可直接在 GitHub 编辑文章文件；长期维护建议先把文章迁移为 Markdown 并通过静态站点生成器构建，再按需要接入带身份验证的 CMS 管理界面。
 
 ### 调整视觉风格
 
-颜色、间距和字体变量集中定义在 `css/home.css` 顶部的 `:root` 中。深色主题变量位于 `:root[data-theme="dark"]`。
+主页与博客首页的颜色、间距和字体变量集中定义在 `css/home.css` 顶部的 `:root` 中；子页面的对应变量在 `css/article.css`。深色主题变量位于各文件的 `:root[data-theme="dark"]`。
 
 ## 本地预览
 
@@ -44,4 +53,3 @@ python3 -m http.server 4173
 本站由 GitHub Pages 托管。确认修改无误后，将提交推送到 `main` 分支，GitHub Pages 会自动更新线上内容。
 
 每次发布时请同步更新 [`CHANGELOG.md`](CHANGELOG.md)，简要记录新增、修改和修复的内容。
-
