@@ -1,0 +1,91 @@
+.profile-hero {
+  min-height: calc(100vh - 76px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.72fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 110px);
+  padding-block: 92px;
+}
+
+.profile-intro h1,
+.profile-section h2,
+.profile-card h2 { margin: 0; font-family: var(--serif); font-weight: 500; letter-spacing: -0.052em; line-height: 0.98; }
+.profile-intro h1 { font-size: clamp(4.5rem, 9vw, 8.5rem); }
+.profile-intro h1 em { color: var(--orange); font-weight: 500; }
+.profile-lead { max-width: 690px; margin: 32px 0 0; color: var(--muted); font-size: clamp(1.05rem, 1.8vw, 1.3rem); }
+
+.profile-card { min-height: 520px; display: flex; flex-direction: column; justify-content: space-between; padding: 34px; border: 1.5px solid var(--ink); border-radius: 180px 180px 24px 24px; color: #151714; background: var(--acid); box-shadow: 18px 18px 0 var(--orange); transform: rotate(1.5deg); }
+.profile-monogram { align-self: center; margin-top: 12px; font-family: var(--serif); font-size: clamp(5rem, 9vw, 8rem); letter-spacing: -0.09em; line-height: 1; }
+.profile-label { margin: 0 0 12px; font-size: 0.64rem; font-weight: 900; letter-spacing: 0.16em; }
+.profile-card h2 { font-size: clamp(2rem, 3.4vw, 3.25rem); }
+.profile-facts { margin: 30px 0 0; border-top: 1px solid rgba(21, 23, 20, 0.22); }
+.profile-facts div { display: grid; grid-template-columns: 90px 1fr; gap: 14px; padding: 10px 0; border-bottom: 1px solid rgba(21, 23, 20, 0.22); font-size: 0.74rem; }
+.profile-facts dt { font-weight: 850; }
+.profile-facts dd { margin: 0; }
+
+.profile-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(48px, 8vw, 110px); padding-block: 80px 150px; border-top: 1px solid var(--line); }
+.profile-rail { min-width: 0; align-self: start; position: sticky; top: 116px; }
+.profile-rail nav { display: grid; gap: 13px; }
+.profile-rail nav a { width: fit-content; color: var(--muted); font-size: 0.76rem; font-weight: 800; }
+.profile-rail nav a:hover { color: var(--ink); }
+.profile-content { min-width: 0; }
+.profile-section { padding: 70px 0 100px; border-bottom: 1px solid var(--line); scroll-margin-top: 82px; }
+.profile-section:first-child { padding-top: 0; }
+.profile-section:last-child { border-bottom: 0; }
+.profile-section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.profile-section-head span { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; color: var(--muted); font-size: 0.66rem; font-weight: 850; }
+.profile-section-head p { margin: 0; color: var(--muted); font-size: 0.66rem; font-weight: 900; letter-spacing: 0.16em; }
+.profile-section h2 { max-width: 870px; font-size: clamp(3rem, 6vw, 6rem); }
+.profile-section > p { max-width: 760px; color: var(--muted); }
+.profile-section .profile-body-lead { margin: 42px 0 12px; color: var(--ink); font-family: var(--serif); font-size: clamp(1.45rem, 2.5vw, 2.2rem); line-height: 1.3; }
+
+.focus-list { margin-top: 48px; border-top: 1px solid var(--line); }
+.focus-list article { display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 22px; padding: 28px 4px; border-bottom: 1px solid var(--line); }
+.focus-list article > span { color: var(--orange); font-family: var(--serif); }
+.focus-list h3 { margin: 0 0 8px; font-family: var(--serif); font-size: clamp(1.5rem, 2.8vw, 2.3rem); font-weight: 500; }
+.focus-list p { max-width: 700px; margin: 0; color: var(--muted); }
+
+.resume-skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 48px; }
+.resume-skills > div { min-height: 200px; padding: 26px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); }
+.resume-skills h3 { margin: 0 0 70px; color: var(--orange); font-size: 0.7rem; letter-spacing: 0.13em; text-transform: uppercase; }
+.resume-skills p { margin: 0; color: var(--ink); font-family: var(--serif); font-size: 1.25rem; line-height: 1.45; }
+
+.profile-links { margin-top: 48px; border-top: 1px solid var(--line); }
+.profile-links a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; min-height: 132px; padding: 24px 10px; border-bottom: 1px solid var(--line); transition: padding 180ms ease, background 180ms ease; }
+.profile-links a:hover { padding-inline: 24px; background: var(--card); }
+.profile-links a > span:first-child { display: grid; gap: 6px; }
+.profile-links small { color: var(--muted); font-size: 0.62rem; font-weight: 850; letter-spacing: 0.12em; }
+.profile-links strong { font-family: var(--serif); font-size: clamp(1.6rem, 3.3vw, 2.7rem); font-weight: 500; }
+.profile-links a > span:last-child { display: grid; place-items: center; width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 50%; }
+.profile-links a:hover > span:last-child { color: #151714; background: var(--orange); border-color: var(--orange); }
+
+.profile-contact { padding-bottom: 0; }
+.profile-contact .button { margin-top: 24px; }
+
+@media (max-width: 900px) {
+  .profile-hero { min-height: auto; grid-template-columns: 1fr; gap: 62px; padding-block: 76px 100px; }
+  .profile-card { width: min(100%, 470px); min-height: 480px; margin-inline: auto; }
+  .profile-layout { grid-template-columns: 1fr; gap: 40px; padding-block: 74px 110px; }
+  .profile-rail { position: static; }
+  .profile-rail nav { grid-template-columns: repeat(5, max-content); gap: 18px; overflow-x: auto; padding-bottom: 10px; }
+  .resume-skills { grid-template-columns: 1fr; }
+  .resume-skills > div { min-height: 160px; }
+  .resume-skills h3 { margin-bottom: 44px; }
+}
+
+@media (max-width: 620px) {
+  .profile-hero { gap: 48px; padding-block: 52px 76px; }
+  .profile-intro h1 { font-size: clamp(3.4rem, 18vw, 5rem); }
+  .profile-lead { margin-top: 24px; }
+  .profile-card { min-height: 420px; padding: 28px; border-radius: 140px 140px 22px 22px; box-shadow: 10px 10px 0 var(--orange); }
+  .profile-card h2 { font-size: 1.85rem; }
+  .profile-monogram { font-size: 5.5rem; }
+  .profile-layout { padding-block: 64px 88px; }
+  .profile-section { padding-block: 64px 80px; }
+  .profile-section h2 { font-size: clamp(2.65rem, 13vw, 4rem); }
+  .profile-section .profile-body-lead { margin-top: 34px; }
+  .focus-list article { grid-template-columns: 38px minmax(0, 1fr); gap: 14px; }
+  .resume-skills > div { min-height: 150px; padding: 22px; }
+  .resume-skills h3 { margin-bottom: 34px; }
+  .profile-links a { min-height: 116px; }
+}
