@@ -26,13 +26,17 @@
       <div class="shell nav-wrap">
         <a class="brand" href="https://primer-1-wy.github.io/" aria-label="返回首页"><span class="brand-mark" aria-hidden="true">W</span><span>wy-1226</span></a>
         <nav class="desktop-nav" aria-label="主导航">
-          <a href="#about">关于</a><a href="#projects">项目</a><a href="/blog/">博客</a><a href="#skills">技能</a>
+          <a href="#projects">项目</a><a href="/blog/">博客</a><a href="/about/">个人档案</a><a href="#skills">技能</a>
         </nav>
         <div class="nav-actions">
+          <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mobile-nav"><span aria-hidden="true">☰</span></button>
           <button class="theme-toggle" type="button" aria-label="切换深色模式"><span class="theme-icon" aria-hidden="true">☾</span></button>
           <a class="nav-cta" href="https://github.com/Primer-1-wy" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </div>
       </div>
+      <nav class="mobile-nav shell" id="mobile-nav" aria-label="移动端导航" hidden>
+        <a href="#projects">项目</a><a href="/blog/">博客</a><a href="/about/">个人档案</a><a href="#skills">技能</a>
+      </nav>
     </header>
 
     <main id="main">
@@ -53,36 +57,34 @@
         </div>
       </section>
 
+      <section id="projects" class="section shell">
+        <div class="section-heading compact reveal">
+          <span class="section-number">01</span><div><p class="eyebrow">PROJECT SHOWCASE</p><h2>项目作品</h2></div>
+          <a class="text-link heading-link" href="https://github.com/Primer-1-wy?tab=repositories" target="_blank" rel="noreferrer">查看全部仓库 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="project-placeholder reveal">
+          <div class="placeholder-status"><span aria-hidden="true"></span> PRIVATE WORK IN PROGRESS</div>
+          <div class="placeholder-copy">
+            <h3>项目正在打磨中。</h3>
+            <p>部分研究与实验作品尚未公开，准备完成后会在这里正式发布。</p>
+          </div>
+          <a class="placeholder-link" href="https://github.com/Primer-1-wy?tab=repositories" target="_blank" rel="noreferrer">先看看 GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
       <section id="about" class="section shell about-grid">
         <div class="section-heading reveal">
-          <span class="section-number">01</span>
-          <div><p class="eyebrow">ABOUT ME</p><h2>好奇心，是我的<br />长期驱动力。</h2></div>
+          <span class="section-number">02</span>
+          <div><p class="eyebrow">SHORT PROFILE</p><h2>好奇心，是我的<br />长期驱动力。</h2></div>
         </div>
         <div class="about-copy reveal">
           <p class="lead">我关注计算机科学基础，也热衷于把知识运用到真实项目中。</p>
-          <p>从 C 语言与系统实验，到 Python 数据分析和 Java 应用开发，我在一次次实践中建立自己的技术地图。这个网站既是作品陈列柜，也是我持续学习、整理和分享的地方。</p>
+          <p>从系统实验到数据分析和应用开发，我在一次次实践中建立自己的技术地图。这里保留简短介绍，完整背景与能力概览则放在独立个人档案页中。</p>
+          <a class="text-link about-profile-link" href="/about/">进入个人档案 / CV <span aria-hidden="true">→</span></a>
           <div class="principles">
             <div><span>01</span><strong>保持好奇</strong><small>追问原理，而不只满足于答案</small></div>
             <div><span>02</span><strong>动手构建</strong><small>让知识在项目中真正发生</small></div>
             <div><span>03</span><strong>持续分享</strong><small>用写作沉淀思考与经验</small></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section shell">
-        <div class="section-heading compact reveal">
-          <span class="section-number">02</span><div><p class="eyebrow">PROJECT SHOWCASE</p><h2>项目作品</h2></div>
-          <a class="text-link heading-link" href="https://github.com/Primer-1-wy?tab=repositories" target="_blank" rel="noreferrer">查看全部仓库 <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="projects-list">
-          <div class="project-card reveal">
-            <span class="project-no">—</span>
-            <div class="project-main">
-              <div class="project-meta"><span>COMING SOON</span></div>
-              <h3>项目正在整理中</h3>
-              <p>这里将持续展示我认真完成的项目、产品与实验作品。</p>
-            </div>
-            <span class="project-arrow" aria-hidden="true">＋</span>
           </div>
         </div>
       </section>
